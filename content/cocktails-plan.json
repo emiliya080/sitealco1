@@ -1,0 +1,3498 @@
+{
+  "title": "100 известных алкогольных коктейлей",
+  "note": "Редакционная подборка, не мировой рейтинг продаж или популярности. Не опубликована в каталоге: ожидает проверки рецептов и фотографий.",
+  "occasions": {
+    "aperitif": "Перед ужином",
+    "summer": "Летний отдых",
+    "date": "Романтический вечер",
+    "party": "Вечеринка",
+    "brunch": "Бранч",
+    "after-dinner": "После ужина",
+    "cozy": "Уютный вечер",
+    "celebration": "Праздничный стол"
+  },
+  "cocktails": [
+    {
+      "id": "mojito",
+      "name": "Mojito",
+      "selection_number": 1,
+      "occasions": [
+        "summer"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Mojito",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 4,
+            "ingredient": "White rum",
+            "label": "White Cuban Rum",
+            "amount_ml": 40
+          },
+          {
+            "unit": "cl",
+            "amount": 3,
+            "ingredient": "Lime juice",
+            "amount_ml": 30
+          },
+          {
+            "special": "6 Mint sprigs"
+          },
+          {
+            "special": "2 teaspoons white sugar"
+          },
+          {
+            "special": "Soda water"
+          }
+        ],
+        "garnish": "Mint leaves and lemon slice",
+        "glass": "collins",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "margarita",
+      "name": "Margarita",
+      "selection_number": 2,
+      "occasions": [
+        "summer"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Margarita",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 3.5,
+            "ingredient": "Tequila",
+            "amount_ml": 35.0
+          },
+          {
+            "unit": "cl",
+            "amount": 2,
+            "ingredient": "Triple Sec",
+            "label": "Cointreau",
+            "amount_ml": 20
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Lime juice",
+            "amount_ml": 15.0
+          }
+        ],
+        "garnish": null,
+        "glass": "margarita",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "negroni",
+      "name": "Negroni",
+      "selection_number": 3,
+      "occasions": [
+        "aperitif"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Negroni",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 3,
+            "ingredient": "Gin",
+            "amount_ml": 30
+          },
+          {
+            "unit": "cl",
+            "amount": 3,
+            "ingredient": "Campari",
+            "amount_ml": 30
+          },
+          {
+            "unit": "cl",
+            "amount": 3,
+            "ingredient": "Vermouth",
+            "label": "Sweet red vermouth",
+            "amount_ml": 30
+          }
+        ],
+        "garnish": "Half an orange slice",
+        "glass": "old-fashioned",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "old-fashioned",
+      "name": "Old Fashioned",
+      "selection_number": 4,
+      "occasions": [
+        "cozy"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Old Fashioned",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 4.5,
+            "ingredient": "Whiskey",
+            "label": "Bourbon or rye whiskey",
+            "amount_ml": 45.0
+          },
+          {
+            "special": "2 dashes Angostura Bitters"
+          },
+          {
+            "special": "1 sugar cube"
+          },
+          {
+            "special": "Few dashes plain water"
+          }
+        ],
+        "garnish": "Orange slice and cherry",
+        "glass": "old-fashioned",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "espresso-martini",
+      "name": "Espresso Martini",
+      "selection_number": 5,
+      "occasions": [
+        "after-dinner"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Espresso Martini",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 5,
+            "ingredient": "Vodka",
+            "amount_ml": 50
+          },
+          {
+            "unit": "cl",
+            "amount": 1,
+            "ingredient": "Coffee liqueur",
+            "label": "Kahlúa",
+            "amount_ml": 10
+          },
+          {
+            "special": "Sugar syrup (according to individual preference of sweetness)"
+          },
+          {
+            "special": "1 short strong Espresso"
+          }
+        ],
+        "garnish": null,
+        "glass": "martini",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "dry-martini",
+      "name": "Dry Martini",
+      "selection_number": 6,
+      "occasions": [
+        "aperitif"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Dry Martini",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 6,
+            "ingredient": "Gin",
+            "amount_ml": 60
+          },
+          {
+            "unit": "cl",
+            "amount": 1,
+            "ingredient": "Vermouth",
+            "label": "Dry vermouth",
+            "amount_ml": 10
+          }
+        ],
+        "garnish": null,
+        "glass": "martini",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "manhattan",
+      "name": "Manhattan",
+      "selection_number": 7,
+      "occasions": [
+        "cozy"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Manhattan",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 5,
+            "ingredient": "Whiskey",
+            "label": "Rye whiskey",
+            "amount_ml": 50
+          },
+          {
+            "unit": "cl",
+            "amount": 2,
+            "ingredient": "Vermouth",
+            "label": "Red vermouth",
+            "amount_ml": 20
+          },
+          {
+            "special": "1 dash Angostura Bitters"
+          }
+        ],
+        "garnish": "Cherry",
+        "glass": "martini",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "whiskey-sour",
+      "name": "Whiskey Sour",
+      "selection_number": 8,
+      "occasions": [
+        "cozy"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Whiskey Sour",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 4.5,
+            "ingredient": "Whiskey",
+            "label": "Bourbon whiskey",
+            "amount_ml": 45.0
+          },
+          {
+            "unit": "cl",
+            "amount": 3.0,
+            "ingredient": "Lemon juice",
+            "amount_ml": 30.0
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Syrup",
+            "label": "Sugar syrup",
+            "amount_ml": 15.0
+          }
+        ],
+        "garnish": "Half an orange slice and cherry",
+        "glass": "old-fashioned",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "daiquiri",
+      "name": "Daiquiri",
+      "selection_number": 9,
+      "occasions": [
+        "summer"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Daiquiri",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 4.5,
+            "ingredient": "White rum",
+            "amount_ml": 45.0
+          },
+          {
+            "unit": "cl",
+            "amount": 2.5,
+            "ingredient": "Lime juice",
+            "amount_ml": 25.0
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Syrup",
+            "label": "Simple syrup",
+            "amount_ml": 15.0
+          }
+        ],
+        "garnish": null,
+        "glass": "martini",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "pina-colada",
+      "name": "Pina Colada",
+      "selection_number": 10,
+      "occasions": [
+        "summer"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Pina Colada",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 3,
+            "ingredient": "White rum",
+            "amount_ml": 30
+          },
+          {
+            "unit": "cl",
+            "amount": 9,
+            "ingredient": "Pineapple juice",
+            "amount_ml": 90
+          },
+          {
+            "unit": "cl",
+            "amount": 3,
+            "ingredient": "Coconut milk",
+            "amount_ml": 30
+          }
+        ],
+        "garnish": "Pineapple slice and a cherry",
+        "glass": "hurricane",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "aperol-spritz",
+      "name": "Aperol Spritz",
+      "selection_number": 11,
+      "occasions": [
+        "aperitif",
+        "celebration"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Spritz Veneziano",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 6,
+            "ingredient": "Prosecco",
+            "amount_ml": 60
+          },
+          {
+            "unit": "cl",
+            "amount": 4,
+            "ingredient": "Aperol",
+            "amount_ml": 40
+          },
+          {
+            "special": "Splash of Soda water"
+          }
+        ],
+        "garnish": "Half an orange slice",
+        "glass": "old-fashioned",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "cosmopolitan",
+      "name": "Cosmopolitan",
+      "selection_number": 12,
+      "occasions": [
+        "date"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Cosmopolitan",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 4,
+            "ingredient": "Vodka",
+            "label": "Citron Vodka",
+            "amount_ml": 40
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Triple Sec",
+            "label": "Cointreau",
+            "amount_ml": 15.0
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Lime juice",
+            "amount_ml": 15.0
+          },
+          {
+            "unit": "cl",
+            "amount": 3,
+            "ingredient": "Cranberry juice",
+            "amount_ml": 30
+          }
+        ],
+        "garnish": "Lime slice",
+        "glass": "martini",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "bloody-mary",
+      "name": "Bloody Mary",
+      "selection_number": 13,
+      "occasions": [
+        "brunch"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Bloody Mary",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 4.5,
+            "ingredient": "Vodka",
+            "amount_ml": 45.0
+          },
+          {
+            "unit": "cl",
+            "amount": 9,
+            "ingredient": "Tomato juice",
+            "amount_ml": 90
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Lemon juice",
+            "amount_ml": 15.0
+          },
+          {
+            "special": "2 to 3 dashes of Worcestershire Sauce"
+          },
+          {
+            "special": "Tabasco"
+          },
+          {
+            "special": "Celery salt"
+          },
+          {
+            "special": "Pepper"
+          }
+        ],
+        "garnish": "Celery and optionally lemon wedge",
+        "glass": "highball",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "moscow-mule",
+      "name": "Moscow Mule",
+      "selection_number": 14,
+      "occasions": [
+        "aperitif"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Moscow Mule",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 4.5,
+            "ingredient": "Vodka",
+            "amount_ml": 45.0
+          },
+          {
+            "unit": "cl",
+            "amount": 12,
+            "ingredient": "Ginger beer",
+            "amount_ml": 120
+          },
+          {
+            "unit": "cl",
+            "amount": 0.5,
+            "ingredient": "Lime juice",
+            "amount_ml": 5.0
+          },
+          {
+            "special": "1 slice lime in a highball glass"
+          }
+        ],
+        "garnish": "Lime slice",
+        "glass": "highball",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "mai-tai",
+      "name": "Mai Tai",
+      "selection_number": 15,
+      "occasions": [
+        "summer"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Mai-tai",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 4,
+            "ingredient": "White rum",
+            "amount_ml": 40
+          },
+          {
+            "unit": "cl",
+            "amount": 2,
+            "ingredient": "Dark rum",
+            "amount_ml": 20
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Triple Sec",
+            "label": "Orange Curaçao",
+            "amount_ml": 15.0
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Syrup",
+            "label": "Orgeat syrup",
+            "amount_ml": 15.0
+          },
+          {
+            "unit": "cl",
+            "amount": 1,
+            "ingredient": "Lime juice",
+            "amount_ml": 10
+          }
+        ],
+        "garnish": "Pineapple spear, mint leaves and lime wedge",
+        "glass": "highball",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "long-island-iced-tea",
+      "name": "Long Island Iced Tea",
+      "selection_number": 16,
+      "occasions": [
+        "party"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Long Island Iced Tea",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Tequila",
+            "amount_ml": 15.0
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Vodka",
+            "amount_ml": 15.0
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "White rum",
+            "amount_ml": 15.0
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Triple Sec",
+            "amount_ml": 15.0
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Gin",
+            "amount_ml": 15.0
+          },
+          {
+            "unit": "cl",
+            "amount": 2.5,
+            "ingredient": "Lemon juice",
+            "amount_ml": 25.0
+          },
+          {
+            "unit": "cl",
+            "amount": 3.0,
+            "ingredient": "Syrup",
+            "label": "Gomme syrup",
+            "amount_ml": 30.0
+          },
+          {
+            "special": "1 dash of Cola"
+          }
+        ],
+        "garnish": "Lemon twist",
+        "glass": "highball",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "gin-and-tonic",
+      "name": "Gin and Tonic",
+      "selection_number": 17,
+      "occasions": [
+        "summer"
+      ],
+      "recipe_source": null,
+      "recipe_status": "needs_online_source",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "paloma",
+      "name": "Paloma",
+      "selection_number": 18,
+      "occasions": [
+        "summer"
+      ],
+      "recipe_source": null,
+      "recipe_status": "needs_online_source",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "white-russian",
+      "name": "White Russian",
+      "selection_number": 19,
+      "occasions": [
+        "after-dinner"
+      ],
+      "recipe_source": null,
+      "recipe_status": "needs_online_source",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "sex-on-the-beach",
+      "name": "Sex on the Beach",
+      "selection_number": 20,
+      "occasions": [
+        "party"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Sex on the Beach",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 4,
+            "ingredient": "Vodka",
+            "amount_ml": 40
+          },
+          {
+            "unit": "cl",
+            "amount": 2,
+            "ingredient": "Peach schnapps",
+            "amount_ml": 20
+          },
+          {
+            "unit": "cl",
+            "amount": 4,
+            "ingredient": "Cranberry juice",
+            "amount_ml": 40
+          },
+          {
+            "unit": "cl",
+            "amount": 4,
+            "ingredient": "Orange juice",
+            "amount_ml": 40
+          }
+        ],
+        "garnish": "Orange slice",
+        "glass": "highball",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "vesper",
+      "name": "Vesper",
+      "selection_number": 21,
+      "occasions": [
+        "aperitif"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Vesper",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 6,
+            "ingredient": "Gin",
+            "amount_ml": 60
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Vodka",
+            "amount_ml": 15.0
+          },
+          {
+            "unit": "cl",
+            "amount": 0.75,
+            "ingredient": "Lillet Blonde",
+            "amount_ml": 7.5
+          }
+        ],
+        "garnish": "Lemon twist",
+        "glass": "martini",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "bacardi",
+      "name": "Bacardi",
+      "selection_number": 22,
+      "occasions": [
+        "party"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Bacardi",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 4.5,
+            "ingredient": "White rum",
+            "label": "Bacardi White Rum",
+            "amount_ml": 45.0
+          },
+          {
+            "unit": "cl",
+            "amount": 2,
+            "ingredient": "Lime juice",
+            "amount_ml": 20
+          },
+          {
+            "unit": "cl",
+            "amount": 1,
+            "ingredient": "Syrup",
+            "label": "Grenadine",
+            "amount_ml": 10
+          }
+        ],
+        "garnish": null,
+        "glass": "martini",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "rose",
+      "name": "Rose",
+      "selection_number": 23,
+      "occasions": [
+        "aperitif",
+        "date"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Rose",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 2,
+            "ingredient": "Kirsch",
+            "amount_ml": 20
+          },
+          {
+            "unit": "cl",
+            "amount": 4,
+            "ingredient": "Vermouth",
+            "label": "Dry vermouth",
+            "amount_ml": 40
+          },
+          {
+            "special": "3 dashes Strawberry syrup"
+          }
+        ],
+        "garnish": null,
+        "glass": "martini",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "tuxedo",
+      "name": "Tuxedo",
+      "selection_number": 24,
+      "occasions": [
+        "aperitif"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Tuxedo",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 3,
+            "ingredient": "Gin",
+            "label": "Old Tom Gin",
+            "amount_ml": 30
+          },
+          {
+            "unit": "cl",
+            "amount": 3,
+            "ingredient": "Vermouth",
+            "label": "Dry vermouth",
+            "amount_ml": 30
+          },
+          {
+            "special": "1/2 bar spoon Maraschino"
+          },
+          {
+            "special": "1/4 bar spoon Absinthe"
+          },
+          {
+            "special": "3 dashes Orange Bitters"
+          }
+        ],
+        "garnish": "Cherry and lemon twist",
+        "glass": "martini",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "horse-s-neck",
+      "name": "Horse's Neck",
+      "selection_number": 25,
+      "occasions": [
+        "cozy"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Horse's Neck",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 4,
+            "ingredient": "Cognac",
+            "amount_ml": 40
+          },
+          {
+            "unit": "cl",
+            "amount": 12,
+            "ingredient": "Ginger Ale",
+            "amount_ml": 120
+          },
+          {
+            "special": "Dash of Angostura bitters (optional)"
+          }
+        ],
+        "garnish": "Lemon twist",
+        "glass": "highball",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "planter-s-punch",
+      "name": "Planter's Punch",
+      "selection_number": 26,
+      "occasions": [
+        "celebration"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Planter's Punch",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 4.5,
+            "ingredient": "Dark rum",
+            "amount_ml": 45.0
+          },
+          {
+            "unit": "cl",
+            "amount": 3.5,
+            "ingredient": "Orange juice",
+            "amount_ml": 35.0
+          },
+          {
+            "unit": "cl",
+            "amount": 3.5,
+            "ingredient": "Pineapple juice",
+            "amount_ml": 35.0
+          },
+          {
+            "unit": "cl",
+            "amount": 2,
+            "ingredient": "Lemon juice",
+            "amount_ml": 20
+          },
+          {
+            "unit": "cl",
+            "amount": 1,
+            "ingredient": "Syrup",
+            "label": "Grenadine",
+            "amount_ml": 10
+          },
+          {
+            "unit": "cl",
+            "amount": 1,
+            "ingredient": "Syrup",
+            "label": "Sugar syrup",
+            "amount_ml": 10
+          },
+          {
+            "special": "3 to 4 dashes Angostura bitters"
+          }
+        ],
+        "garnish": "Pineapple slice and a cherry",
+        "glass": "highball",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "sea-breeze",
+      "name": "Sea Breeze",
+      "selection_number": 27,
+      "occasions": [
+        "summer"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Sea Breeze",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 4,
+            "ingredient": "Vodka",
+            "amount_ml": 40
+          },
+          {
+            "unit": "cl",
+            "amount": 12,
+            "ingredient": "Cranberry juice",
+            "amount_ml": 120
+          },
+          {
+            "unit": "cl",
+            "amount": 3,
+            "ingredient": "Grapefruit juice",
+            "amount_ml": 30
+          }
+        ],
+        "garnish": "Lime wedge",
+        "glass": "highball",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "pisco-sour",
+      "name": "Pisco Sour",
+      "selection_number": 28,
+      "occasions": [
+        "date"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Pisco Sour",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 4.5,
+            "ingredient": "Pisco",
+            "amount_ml": 45.0
+          },
+          {
+            "unit": "cl",
+            "amount": 3,
+            "ingredient": "Lemon juice",
+            "amount_ml": 30
+          },
+          {
+            "unit": "cl",
+            "amount": 2,
+            "ingredient": "Syrup",
+            "label": "Sugar syrup",
+            "amount_ml": 20
+          },
+          {
+            "special": "1 raw egg white (small egg)"
+          }
+        ],
+        "garnish": null,
+        "glass": "old-fashioned",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "clover-club",
+      "name": "Clover Club",
+      "selection_number": 29,
+      "occasions": [
+        "date"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Clover Club",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 4.5,
+            "ingredient": "Gin",
+            "amount_ml": 45.0
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Syrup",
+            "label": "Raspberry syrup",
+            "amount_ml": 15.0
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Lemon juice",
+            "amount_ml": 15.0
+          },
+          {
+            "special": "Few drops of Egg White"
+          }
+        ],
+        "garnish": null,
+        "glass": "martini",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "angel-face",
+      "name": "Angel Face",
+      "selection_number": 30,
+      "occasions": [
+        "cozy"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Angel Face",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 3,
+            "ingredient": "Gin",
+            "amount_ml": 30
+          },
+          {
+            "unit": "cl",
+            "amount": 3,
+            "ingredient": "Apricot brandy",
+            "amount_ml": 30
+          },
+          {
+            "unit": "cl",
+            "amount": 3,
+            "ingredient": "Calvados",
+            "amount_ml": 30
+          }
+        ],
+        "garnish": null,
+        "glass": "martini",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "mimosa",
+      "name": "Mimosa",
+      "selection_number": 31,
+      "occasions": [
+        "brunch",
+        "celebration"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Mimosa",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 7.5,
+            "ingredient": "Champagne",
+            "amount_ml": 75.0
+          },
+          {
+            "unit": "cl",
+            "amount": 7.5,
+            "ingredient": "Orange juice",
+            "amount_ml": 75.0
+          }
+        ],
+        "garnish": "Optional orange twist",
+        "glass": "champagne-flute",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "screwdriver",
+      "name": "Screwdriver",
+      "selection_number": 32,
+      "occasions": [
+        "party",
+        "brunch"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Screwdriver",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 5,
+            "ingredient": "Vodka",
+            "amount_ml": 50
+          },
+          {
+            "unit": "cl",
+            "amount": 10,
+            "ingredient": "Orange juice",
+            "amount_ml": 100
+          }
+        ],
+        "garnish": "Orange slice",
+        "glass": "highball",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "cuba-libre",
+      "name": "Cuba Libre",
+      "selection_number": 33,
+      "occasions": [
+        "summer"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Cuba Libre",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 5,
+            "ingredient": "White rum",
+            "amount_ml": 50
+          },
+          {
+            "unit": "cl",
+            "amount": 12,
+            "ingredient": "Cola",
+            "amount_ml": 120
+          },
+          {
+            "unit": "cl",
+            "amount": 1,
+            "ingredient": "Lime juice",
+            "amount_ml": 10
+          }
+        ],
+        "garnish": "Lime wedge",
+        "glass": "highball",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "porto-flip",
+      "name": "Porto Flip",
+      "selection_number": 34,
+      "occasions": [
+        "after-dinner"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Porto Flip",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Cognac",
+            "amount_ml": 15.0
+          },
+          {
+            "unit": "cl",
+            "amount": 4.5,
+            "ingredient": "Red Port",
+            "amount_ml": 45.0
+          },
+          {
+            "unit": "cl",
+            "amount": 1,
+            "ingredient": "Egg yolk",
+            "amount_ml": 10
+          }
+        ],
+        "garnish": null,
+        "glass": "martini",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "gin-fizz",
+      "name": "Gin Fizz",
+      "selection_number": 35,
+      "occasions": [
+        "summer"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Gin Fizz",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 4.5,
+            "ingredient": "Gin",
+            "amount_ml": 45.0
+          },
+          {
+            "unit": "cl",
+            "amount": 3,
+            "ingredient": "Lemon juice",
+            "amount_ml": 30
+          },
+          {
+            "unit": "cl",
+            "amount": 1,
+            "ingredient": "Syrup",
+            "label": "Sugar syrup",
+            "amount_ml": 10
+          },
+          {
+            "unit": "cl",
+            "amount": 8,
+            "ingredient": "Soda water",
+            "amount_ml": 80
+          }
+        ],
+        "garnish": "Lemon slice",
+        "glass": "highball",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "french-75",
+      "name": "French 75",
+      "selection_number": 36,
+      "occasions": [
+        "date",
+        "brunch",
+        "celebration"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "French 75",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 3,
+            "ingredient": "Gin",
+            "amount_ml": 30
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Lemon juice",
+            "amount_ml": 15.0
+          },
+          {
+            "special": "2 dashes Sugar syrup"
+          },
+          {
+            "unit": "cl",
+            "amount": 6,
+            "ingredient": "Champagne",
+            "amount_ml": 60
+          }
+        ],
+        "garnish": null,
+        "glass": "champagne-tulip",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "yellow-bird",
+      "name": "Yellow Bird",
+      "selection_number": 37,
+      "occasions": [
+        "summer"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Yellow Bird",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 3,
+            "ingredient": "White rum",
+            "amount_ml": 30
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Galliano",
+            "amount_ml": 15.0
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Triple Sec",
+            "amount_ml": 15.0
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Lime juice",
+            "amount_ml": 15.0
+          }
+        ],
+        "garnish": null,
+        "glass": "martini",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "aviation",
+      "name": "Aviation",
+      "selection_number": 38,
+      "occasions": [
+        "date"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Aviation",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 4.5,
+            "ingredient": "Gin",
+            "amount_ml": 45.0
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Cherry liqueur",
+            "label": "Maraschino",
+            "amount_ml": 15.0
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Lemon juice",
+            "amount_ml": 15.0
+          }
+        ],
+        "garnish": null,
+        "glass": "martini",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "bellini",
+      "name": "Bellini",
+      "selection_number": 39,
+      "occasions": [
+        "date",
+        "brunch",
+        "celebration"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Bellini",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 10,
+            "ingredient": "Prosecco",
+            "amount_ml": 100
+          },
+          {
+            "unit": "cl",
+            "amount": 5,
+            "ingredient": "Peach puree",
+            "amount_ml": 50
+          }
+        ],
+        "garnish": null,
+        "glass": "champagne-flute",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "grasshopper",
+      "name": "Grasshopper",
+      "selection_number": 40,
+      "occasions": [
+        "after-dinner"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Grasshopper",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 3,
+            "ingredient": "Créme liqueur",
+            "label": "White Créme de Cacao",
+            "amount_ml": 30
+          },
+          {
+            "unit": "cl",
+            "amount": 3,
+            "ingredient": "Créme liqueur",
+            "label": "Green Créme de Menthe",
+            "amount_ml": 30
+          },
+          {
+            "unit": "cl",
+            "amount": 3,
+            "ingredient": "Cream",
+            "amount_ml": 30
+          }
+        ],
+        "garnish": null,
+        "glass": "martini",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "tequila-sunrise",
+      "name": "Tequila Sunrise",
+      "selection_number": 41,
+      "occasions": [
+        "summer"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Tequila Sunrise",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 4.5,
+            "ingredient": "Tequila",
+            "amount_ml": 45.0
+          },
+          {
+            "unit": "cl",
+            "amount": 9,
+            "ingredient": "Orange juice",
+            "amount_ml": 90
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Syrup",
+            "label": "Grenadine",
+            "amount_ml": 15.0
+          }
+        ],
+        "garnish": "Orange slice and a cherry",
+        "glass": "highball",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "rusty-nail",
+      "name": "Rusty Nail",
+      "selection_number": 42,
+      "occasions": [
+        "after-dinner"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Rusty Nail",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 4.5,
+            "ingredient": "Whiskey",
+            "label": "Scotch whisky",
+            "amount_ml": 45.0
+          },
+          {
+            "unit": "cl",
+            "amount": 2.5,
+            "ingredient": "Drambuie",
+            "amount_ml": 25.0
+          }
+        ],
+        "garnish": "Lemon twist",
+        "glass": "old-fashioned",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "b-52",
+      "name": "B-52",
+      "selection_number": 43,
+      "occasions": [
+        "party"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "B52",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 2,
+            "ingredient": "Coffee liqueur",
+            "label": "Kahlúa",
+            "amount_ml": 20
+          },
+          {
+            "unit": "cl",
+            "amount": 2,
+            "ingredient": "Cream liqueur",
+            "label": "Baileys Irish Cream",
+            "amount_ml": 20
+          },
+          {
+            "unit": "cl",
+            "amount": 2,
+            "ingredient": "Triple Sec",
+            "label": "Grand Marnier",
+            "amount_ml": 20
+          }
+        ],
+        "garnish": null,
+        "glass": "shot",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "stinger",
+      "name": "Stinger",
+      "selection_number": 44,
+      "occasions": [
+        "after-dinner"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Stinger",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 5,
+            "ingredient": "Cognac",
+            "amount_ml": 50
+          },
+          {
+            "unit": "cl",
+            "amount": 2,
+            "ingredient": "Créme liqueur",
+            "label": "White Créme de Menthe",
+            "amount_ml": 20
+          }
+        ],
+        "garnish": null,
+        "glass": "martini",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "golden-dream",
+      "name": "Golden Dream",
+      "selection_number": 45,
+      "occasions": [
+        "after-dinner"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Golden Dream",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 2,
+            "ingredient": "Galliano",
+            "amount_ml": 20
+          },
+          {
+            "unit": "cl",
+            "amount": 2,
+            "ingredient": "Triple Sec",
+            "amount_ml": 20
+          },
+          {
+            "unit": "cl",
+            "amount": 2,
+            "ingredient": "Orange juice",
+            "amount_ml": 20
+          },
+          {
+            "unit": "cl",
+            "amount": 1,
+            "ingredient": "Cream",
+            "amount_ml": 10
+          }
+        ],
+        "garnish": null,
+        "glass": "martini",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "godmother",
+      "name": "Godmother",
+      "selection_number": 46,
+      "occasions": [
+        "after-dinner"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "God Mother",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 3.5,
+            "ingredient": "Vodka",
+            "amount_ml": 35.0
+          },
+          {
+            "unit": "cl",
+            "amount": 3.5,
+            "ingredient": "DiSaronno",
+            "amount_ml": 35.0
+          }
+        ],
+        "garnish": null,
+        "glass": "old-fashioned",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "bramble",
+      "name": "Bramble",
+      "selection_number": 47,
+      "occasions": [
+        "summer"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Bramble",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 4,
+            "ingredient": "Gin",
+            "amount_ml": 40
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Lemon juice",
+            "amount_ml": 15.0
+          },
+          {
+            "unit": "cl",
+            "amount": 1,
+            "ingredient": "Syrup",
+            "label": "Sugar syrup",
+            "amount_ml": 10
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Blackberry liqueur",
+            "amount_ml": 15.0
+          }
+        ],
+        "garnish": "Lemon slice and two blackberries",
+        "glass": "old-fashioned",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "alexander",
+      "name": "Alexander",
+      "selection_number": 48,
+      "occasions": [
+        "after-dinner"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Alexander",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 3,
+            "ingredient": "Cognac",
+            "amount_ml": 30
+          },
+          {
+            "unit": "cl",
+            "amount": 3,
+            "ingredient": "Créme liqueur",
+            "label": "Brown Créme de Cacao",
+            "amount_ml": 30
+          },
+          {
+            "unit": "cl",
+            "amount": 3,
+            "ingredient": "Cream",
+            "amount_ml": 30
+          }
+        ],
+        "garnish": null,
+        "glass": "martini",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "lemon-drop-martini",
+      "name": "Lemon Drop Martini",
+      "selection_number": 49,
+      "occasions": [
+        "party"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Lemon Drop Martini",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 2.5,
+            "ingredient": "Vodka",
+            "label": "Citron Vodka",
+            "amount_ml": 25.0
+          },
+          {
+            "unit": "cl",
+            "amount": 2,
+            "ingredient": "Triple Sec",
+            "amount_ml": 20
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Lemon juice",
+            "amount_ml": 15.0
+          }
+        ],
+        "garnish": "Lemon slice",
+        "glass": "martini",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "french-martini",
+      "name": "French Martini",
+      "selection_number": 50,
+      "occasions": [
+        "date"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "French Martini",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 4.5,
+            "ingredient": "Vodka",
+            "amount_ml": 45.0
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Raspberry liqueur",
+            "amount_ml": 15.0
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Pineapple juice",
+            "amount_ml": 15.0
+          }
+        ],
+        "garnish": null,
+        "glass": "martini",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "black-russian",
+      "name": "Black Russian",
+      "selection_number": 51,
+      "occasions": [
+        "after-dinner"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Black Russian",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 5,
+            "ingredient": "Vodka",
+            "amount_ml": 50
+          },
+          {
+            "unit": "cl",
+            "amount": 2,
+            "ingredient": "Coffee liqueur",
+            "amount_ml": 20
+          }
+        ],
+        "garnish": null,
+        "glass": "old-fashioned",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "barracuda",
+      "name": "Barracuda",
+      "selection_number": 52,
+      "occasions": [
+        "summer"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Barracuda",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 4.5,
+            "ingredient": "Dark rum",
+            "label": "Gold rum",
+            "amount_ml": 45.0
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Galliano",
+            "amount_ml": 15.0
+          },
+          {
+            "unit": "cl",
+            "amount": 6,
+            "ingredient": "Pineapple juice",
+            "amount_ml": 60
+          },
+          {
+            "special": "1 dash Lime juice"
+          },
+          {
+            "special": "Top with Prosecco"
+          }
+        ],
+        "garnish": null,
+        "glass": "margarita",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "monkey-gland",
+      "name": "Monkey Gland",
+      "selection_number": 53,
+      "occasions": [
+        "party"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Monkey Gland",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 5,
+            "ingredient": "Gin",
+            "amount_ml": 50
+          },
+          {
+            "unit": "cl",
+            "amount": 3,
+            "ingredient": "Orange juice",
+            "amount_ml": 30
+          },
+          {
+            "special": "2 drops Absinthe"
+          },
+          {
+            "special": "2 drops Grenadine"
+          }
+        ],
+        "garnish": null,
+        "glass": "martini",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "derby",
+      "name": "Derby",
+      "selection_number": 54,
+      "occasions": [
+        "cozy"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Derby",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 6,
+            "ingredient": "Gin",
+            "amount_ml": 60
+          },
+          {
+            "special": "2 drops Peach Bitters"
+          },
+          {
+            "special": "2 Fresh mint leaves"
+          }
+        ],
+        "garnish": "Mint leaves",
+        "glass": "martini",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "sidecar",
+      "name": "Sidecar",
+      "selection_number": 55,
+      "occasions": [
+        "aperitif"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Sidecar",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 5,
+            "ingredient": "Cognac",
+            "amount_ml": 50
+          },
+          {
+            "unit": "cl",
+            "amount": 2,
+            "ingredient": "Triple Sec",
+            "amount_ml": 20
+          },
+          {
+            "unit": "cl",
+            "amount": 2,
+            "ingredient": "Lemon juice",
+            "amount_ml": 20
+          }
+        ],
+        "garnish": null,
+        "glass": "martini",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "irish-coffee",
+      "name": "Irish Coffee",
+      "selection_number": 56,
+      "occasions": [
+        "cozy"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Irish Coffee",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 4,
+            "ingredient": "Whiskey",
+            "label": "Irish whiskey",
+            "amount_ml": 40
+          },
+          {
+            "unit": "cl",
+            "amount": 9,
+            "ingredient": "Hot coffee",
+            "amount_ml": 90
+          },
+          {
+            "unit": "cl",
+            "amount": 3,
+            "ingredient": "Cream",
+            "amount_ml": 30
+          },
+          {
+            "special": "1 teaspoon of brown sugar"
+          }
+        ],
+        "garnish": null,
+        "glass": "hot-drink",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "sazerac",
+      "name": "Sazerac",
+      "selection_number": 57,
+      "occasions": [
+        "cozy"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Sazerac",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 5,
+            "ingredient": "Cognac",
+            "amount_ml": 50
+          },
+          {
+            "unit": "cl",
+            "amount": 1,
+            "ingredient": "Absinthe",
+            "amount_ml": 10
+          },
+          {
+            "special": "1 sugar cube"
+          },
+          {
+            "special": "2 dashes Peychaud’s bitters"
+          }
+        ],
+        "garnish": "Lemon twist",
+        "glass": "old-fashioned",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "americano",
+      "name": "Americano",
+      "selection_number": 58,
+      "occasions": [
+        "aperitif"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Americano",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 3,
+            "ingredient": "Campari",
+            "amount_ml": 30
+          },
+          {
+            "unit": "cl",
+            "amount": 3,
+            "ingredient": "Vermouth",
+            "label": "Red vermouth",
+            "amount_ml": 30
+          },
+          {
+            "special": "A splash of soda water"
+          }
+        ],
+        "garnish": "Half an orange slice",
+        "glass": "old-fashioned",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "singapore-sling",
+      "name": "Singapore Sling",
+      "selection_number": 59,
+      "occasions": [
+        "summer",
+        "party"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Singapore Sling",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 3,
+            "ingredient": "Gin",
+            "amount_ml": 30
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Cherry liqueur",
+            "amount_ml": 15.0
+          },
+          {
+            "unit": "cl",
+            "amount": 0.75,
+            "ingredient": "Triple Sec",
+            "label": "Cointreau",
+            "amount_ml": 7.5
+          },
+          {
+            "unit": "cl",
+            "amount": 0.75,
+            "ingredient": "DOM Bénédictine",
+            "amount_ml": 7.5
+          },
+          {
+            "unit": "cl",
+            "amount": 12.0,
+            "ingredient": "Pineapple juice",
+            "amount_ml": 120.0
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Lime juice",
+            "amount_ml": 15.0
+          },
+          {
+            "unit": "cl",
+            "amount": 1,
+            "ingredient": "Syrup",
+            "label": "Grenadine",
+            "amount_ml": 10
+          },
+          {
+            "special": "1 dash Angostura bitters"
+          }
+        ],
+        "garnish": "Pineapple slice and a cherry",
+        "glass": "highball",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "french-connection",
+      "name": "French Connection",
+      "selection_number": 60,
+      "occasions": [
+        "after-dinner"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "French Connection",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 3.5,
+            "ingredient": "Cognac",
+            "amount_ml": 35.0
+          },
+          {
+            "unit": "cl",
+            "amount": 3.5,
+            "ingredient": "DiSaronno",
+            "amount_ml": 35.0
+          }
+        ],
+        "garnish": null,
+        "glass": "old-fashioned",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "john-collins",
+      "name": "John Collins",
+      "selection_number": 61,
+      "occasions": [
+        "summer"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "John Collins",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 4.5,
+            "ingredient": "Gin",
+            "amount_ml": 45.0
+          },
+          {
+            "unit": "cl",
+            "amount": 3,
+            "ingredient": "Lemon juice",
+            "amount_ml": 30
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Syrup",
+            "label": "Sugar syrup",
+            "amount_ml": 15.0
+          },
+          {
+            "unit": "cl",
+            "amount": 6,
+            "ingredient": "Soda water",
+            "amount_ml": 60
+          }
+        ],
+        "garnish": "Lemon slice and a cherry",
+        "glass": "highball",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "kir",
+      "name": "Kir",
+      "selection_number": 62,
+      "occasions": [
+        "date",
+        "celebration"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Kir",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 9,
+            "ingredient": "Dry White Wine",
+            "amount_ml": 90
+          },
+          {
+            "unit": "cl",
+            "amount": 1,
+            "ingredient": "Créme liqueur",
+            "label": "Créme de Cassis",
+            "amount_ml": 10
+          }
+        ],
+        "garnish": null,
+        "glass": "white-wine",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "mint-julep",
+      "name": "Mint Julep",
+      "selection_number": 63,
+      "occasions": [
+        "cozy"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Mint Julep",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 6,
+            "ingredient": "Whiskey",
+            "label": "Bourbon whiskey",
+            "amount_ml": 60
+          },
+          {
+            "special": "4 fresh mint sprigs"
+          },
+          {
+            "special": "1 teaspoon powdered sugar"
+          },
+          {
+            "special": "2 teaspoons water"
+          }
+        ],
+        "garnish": "Mint sprig",
+        "glass": "highball",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "tommy-s-margarita",
+      "name": "Tommy's Margarita",
+      "selection_number": 64,
+      "occasions": [
+        "celebration"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Tommy's Margarita",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 4.5,
+            "ingredient": "Tequila",
+            "amount_ml": 45.0
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Lime juice",
+            "amount_ml": 15.0
+          },
+          {
+            "special": "2 bar spoons of Agave nectar"
+          }
+        ],
+        "garnish": null,
+        "glass": "martini",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "paradise",
+      "name": "Paradise",
+      "selection_number": 65,
+      "occasions": [
+        "date"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Paradise",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 3.5,
+            "ingredient": "Gin",
+            "amount_ml": 35.0
+          },
+          {
+            "unit": "cl",
+            "amount": 2,
+            "ingredient": "Apricot brandy",
+            "amount_ml": 20
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Orange juice",
+            "amount_ml": 15.0
+          }
+        ],
+        "garnish": null,
+        "glass": "martini",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "dirty-martini",
+      "name": "Dirty Martini",
+      "selection_number": 66,
+      "occasions": [
+        "aperitif"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Dirty Martini",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 6,
+            "ingredient": "Vodka",
+            "amount_ml": 60
+          },
+          {
+            "unit": "cl",
+            "amount": 1,
+            "ingredient": "Vermouth",
+            "label": "Dry vermouth",
+            "amount_ml": 10
+          },
+          {
+            "unit": "cl",
+            "amount": 1,
+            "ingredient": "Olive juice",
+            "amount_ml": 10
+          }
+        ],
+        "garnish": "Green olive",
+        "glass": "martini",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "champagne-cocktail",
+      "name": "Champagne Cocktail",
+      "selection_number": 67,
+      "occasions": [
+        "date",
+        "celebration"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Champagne Cocktail",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 9,
+            "ingredient": "Champagne",
+            "amount_ml": 90
+          },
+          {
+            "unit": "cl",
+            "amount": 1,
+            "ingredient": "Cognac",
+            "amount_ml": 10
+          },
+          {
+            "special": "2 dashes Angostura Bitters"
+          },
+          {
+            "special": "1 sugar cube"
+          }
+        ],
+        "garnish": "Orange slice and a cherry",
+        "glass": "champagne-flute",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "mary-pickford",
+      "name": "Mary Pickford",
+      "selection_number": 68,
+      "occasions": [
+        "celebration"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Mary Pickford",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 6,
+            "ingredient": "White rum",
+            "amount_ml": 60
+          },
+          {
+            "unit": "cl",
+            "amount": 1,
+            "ingredient": "Cherry liqueur",
+            "label": "Maraschino",
+            "amount_ml": 10
+          },
+          {
+            "unit": "cl",
+            "amount": 6,
+            "ingredient": "Pineapple juice",
+            "amount_ml": 60
+          },
+          {
+            "unit": "cl",
+            "amount": 1,
+            "ingredient": "Syrup",
+            "label": "Grenadine",
+            "amount_ml": 10
+          }
+        ],
+        "garnish": null,
+        "glass": "martini",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "hemingway-daiquiri",
+      "name": "Hemingway Daiquiri",
+      "selection_number": 69,
+      "occasions": [
+        "summer"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Hemingway Special",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 6,
+            "ingredient": "White rum",
+            "amount_ml": 60
+          },
+          {
+            "unit": "cl",
+            "amount": 4,
+            "ingredient": "Grapefruit juice",
+            "amount_ml": 40
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Cherry liqueur",
+            "label": "Maraschino",
+            "amount_ml": 15.0
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Lime juice",
+            "amount_ml": 15.0
+          }
+        ],
+        "garnish": null,
+        "glass": "martini",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "dark-n-stormy",
+      "name": "Dark 'n' Stormy",
+      "selection_number": 70,
+      "occasions": [
+        "summer"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Dark 'n' Stormy",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 6,
+            "ingredient": "Dark rum",
+            "amount_ml": 60
+          },
+          {
+            "unit": "cl",
+            "amount": 10,
+            "ingredient": "Ginger beer",
+            "amount_ml": 100
+          }
+        ],
+        "garnish": "Lime wedge",
+        "glass": "highball",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "ramos-fizz",
+      "name": "Ramos Fizz",
+      "selection_number": 71,
+      "occasions": [
+        "brunch"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Ramos Fizz",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 4.5,
+            "ingredient": "Gin",
+            "amount_ml": 45.0
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Lime juice",
+            "amount_ml": 15.0
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Lemon juice",
+            "amount_ml": 15.0
+          },
+          {
+            "unit": "cl",
+            "amount": 3,
+            "ingredient": "Syrup",
+            "label": "Sugar syrup",
+            "amount_ml": 30
+          },
+          {
+            "unit": "cl",
+            "amount": 6,
+            "ingredient": "Cream",
+            "amount_ml": 60
+          },
+          {
+            "special": "1 Egg white"
+          },
+          {
+            "special": "3 dashes Orange flower water"
+          },
+          {
+            "special": "2 drops Vanilla extract"
+          },
+          {
+            "special": "Soda water"
+          }
+        ],
+        "garnish": null,
+        "glass": "highball",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "russian-spring-punch",
+      "name": "Russian Spring Punch",
+      "selection_number": 72,
+      "occasions": [
+        "summer"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Russian Spring Punch",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 2.5,
+            "ingredient": "Vodka",
+            "amount_ml": 25.0
+          },
+          {
+            "unit": "cl",
+            "amount": 2.5,
+            "ingredient": "Lemon juice",
+            "amount_ml": 25.0
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Créme liqueur",
+            "label": "Créme de Cassis",
+            "amount_ml": 15.0
+          },
+          {
+            "unit": "cl",
+            "amount": 1,
+            "ingredient": "Syrup",
+            "label": "Sugar syrup",
+            "amount_ml": 10
+          }
+        ],
+        "garnish": "Lemon slice and a blackberry",
+        "glass": "highball",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "godfather",
+      "name": "Godfather",
+      "selection_number": 73,
+      "occasions": [
+        "after-dinner"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "God Father",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 3.5,
+            "ingredient": "Whiskey",
+            "label": "Scotch whisky",
+            "amount_ml": 35.0
+          },
+          {
+            "unit": "cl",
+            "amount": 3.5,
+            "ingredient": "DiSaronno",
+            "amount_ml": 35.0
+          }
+        ],
+        "garnish": null,
+        "glass": "old-fashioned",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "between-the-sheets",
+      "name": "Between the Sheets",
+      "selection_number": 74,
+      "occasions": [
+        "cozy"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Between the Sheets",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 3,
+            "ingredient": "White rum",
+            "amount_ml": 30
+          },
+          {
+            "unit": "cl",
+            "amount": 3,
+            "ingredient": "Cognac",
+            "amount_ml": 30
+          },
+          {
+            "unit": "cl",
+            "amount": 3,
+            "ingredient": "Triple Sec",
+            "amount_ml": 30
+          },
+          {
+            "unit": "cl",
+            "amount": 2,
+            "ingredient": "Lemon juice",
+            "amount_ml": 20
+          }
+        ],
+        "garnish": null,
+        "glass": "martini",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "casino",
+      "name": "Casino",
+      "selection_number": 75,
+      "occasions": [
+        "cozy"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Casino",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 4,
+            "ingredient": "Gin",
+            "label": "Old Tom Gin",
+            "amount_ml": 40
+          },
+          {
+            "unit": "cl",
+            "amount": 1,
+            "ingredient": "Cherry liqueur",
+            "label": "Maraschino",
+            "amount_ml": 10
+          },
+          {
+            "unit": "cl",
+            "amount": 1,
+            "ingredient": "Orange Bitters",
+            "amount_ml": 10
+          },
+          {
+            "unit": "cl",
+            "amount": 1,
+            "ingredient": "Lemon juice",
+            "amount_ml": 10
+          }
+        ],
+        "garnish": "Lemon twist and a cherry",
+        "glass": "martini",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "caipirinha",
+      "name": "Caipirinha",
+      "selection_number": 76,
+      "occasions": [
+        "summer"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Caipirinha",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 5,
+            "ingredient": "Cachaca",
+            "amount_ml": 50
+          },
+          {
+            "special": "half fresh lime cut into 4 wedges"
+          },
+          {
+            "special": "2 teaspoon sugar"
+          }
+        ],
+        "garnish": null,
+        "glass": "old-fashioned",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "vampiro",
+      "name": "Vampiro",
+      "selection_number": 77,
+      "occasions": [
+        "party"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Vampiro",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 5,
+            "ingredient": "Tequila",
+            "label": "Silver Tequila",
+            "amount_ml": 50
+          },
+          {
+            "unit": "cl",
+            "amount": 7,
+            "ingredient": "Tomato juice",
+            "amount_ml": 70
+          },
+          {
+            "unit": "cl",
+            "amount": 3,
+            "ingredient": "Orange juice",
+            "amount_ml": 30
+          },
+          {
+            "unit": "cl",
+            "amount": 1,
+            "ingredient": "Lime juice",
+            "amount_ml": 10
+          },
+          {
+            "special": "1 teaspoon clear honey"
+          },
+          {
+            "special": "Half slice onion finely chopped"
+          },
+          {
+            "special": "Few slices fresh red hot chili peppers"
+          },
+          {
+            "special": "Few drops Worcestershire sauce"
+          },
+          {
+            "special": "Salt"
+          }
+        ],
+        "garnish": "Lime wedge and a green or red chili",
+        "glass": "highball",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "kamikaze",
+      "name": "Kamikaze",
+      "selection_number": 78,
+      "occasions": [
+        "party"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Kamikaze",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 3,
+            "ingredient": "Vodka",
+            "amount_ml": 30
+          },
+          {
+            "unit": "cl",
+            "amount": 3,
+            "ingredient": "Triple Sec",
+            "amount_ml": 30
+          },
+          {
+            "unit": "cl",
+            "amount": 3,
+            "ingredient": "Lime juice",
+            "amount_ml": 30
+          }
+        ],
+        "garnish": null,
+        "glass": "martini",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "white-lady",
+      "name": "White Lady",
+      "selection_number": 79,
+      "occasions": [
+        "aperitif"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "White Lady",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 4,
+            "ingredient": "Gin",
+            "amount_ml": 40
+          },
+          {
+            "unit": "cl",
+            "amount": 3,
+            "ingredient": "Triple Sec",
+            "amount_ml": 30
+          },
+          {
+            "unit": "cl",
+            "amount": 2,
+            "ingredient": "Lemon juice",
+            "amount_ml": 20
+          }
+        ],
+        "garnish": null,
+        "glass": "martini",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "harvey-wallbanger",
+      "name": "Harvey Wallbanger",
+      "selection_number": 80,
+      "occasions": [
+        "party"
+      ],
+      "recipe_source": {
+        "url": "https://github.com/teijo/iba-cocktails/blob/master/recipes.json",
+        "original_name": "Harvey Wallbanger",
+        "kind": "historical_iba_recipe_mirror",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 4.5,
+            "ingredient": "Vodka",
+            "amount_ml": 45.0
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Galliano",
+            "amount_ml": 15.0
+          },
+          {
+            "unit": "cl",
+            "amount": 9,
+            "ingredient": "Orange juice",
+            "amount_ml": 90
+          }
+        ],
+        "garnish": "Orance slice and a cherry",
+        "glass": "highball",
+        "note": "Исторический набор: не утверждается соответствие текущей редакции IBA. Указанные меры сохранены; cl переведены в мл по коэффициенту 10."
+      },
+      "recipe_status": "source_found_needs_editorial_review",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "boulevardier",
+      "name": "Boulevardier",
+      "selection_number": 81,
+      "occasions": [
+        "aperitif"
+      ],
+      "recipe_source": null,
+      "recipe_status": "needs_online_source",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "penicillin",
+      "name": "Penicillin",
+      "selection_number": 82,
+      "occasions": [
+        "cozy"
+      ],
+      "recipe_source": null,
+      "recipe_status": "needs_online_source",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "paper-plane",
+      "name": "Paper Plane",
+      "selection_number": 83,
+      "occasions": [
+        "aperitif"
+      ],
+      "recipe_source": null,
+      "recipe_status": "needs_online_source",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "naked-and-famous",
+      "name": "Naked and Famous",
+      "selection_number": 84,
+      "occasions": [
+        "aperitif"
+      ],
+      "recipe_source": null,
+      "recipe_status": "needs_online_source",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "last-word",
+      "name": "Last Word",
+      "selection_number": 85,
+      "occasions": [
+        "cozy"
+      ],
+      "recipe_source": null,
+      "recipe_status": "needs_online_source",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "vieux-carre",
+      "name": "Vieux Carré",
+      "selection_number": 86,
+      "occasions": [
+        "cozy"
+      ],
+      "recipe_source": null,
+      "recipe_status": "needs_online_source",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "vodka-martini",
+      "name": "Vodka Martini",
+      "selection_number": 87,
+      "occasions": [
+        "aperitif"
+      ],
+      "recipe_source": null,
+      "recipe_status": "needs_online_source",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "tom-collins",
+      "name": "Tom Collins",
+      "selection_number": 88,
+      "occasions": [
+        "summer"
+      ],
+      "recipe_source": null,
+      "recipe_status": "needs_online_source",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "amaretto-sour",
+      "name": "Amaretto Sour",
+      "selection_number": 89,
+      "occasions": [
+        "after-dinner"
+      ],
+      "recipe_source": null,
+      "recipe_status": "needs_online_source",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "new-york-sour",
+      "name": "New York Sour",
+      "selection_number": 90,
+      "occasions": [
+        "cozy"
+      ],
+      "recipe_source": null,
+      "recipe_status": "needs_online_source",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "zombie",
+      "name": "Zombie",
+      "selection_number": 91,
+      "occasions": [
+        "party"
+      ],
+      "recipe_source": null,
+      "recipe_status": "needs_online_source",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "hurricane",
+      "name": "Hurricane",
+      "selection_number": 92,
+      "occasions": [
+        "party"
+      ],
+      "recipe_source": null,
+      "recipe_status": "needs_online_source",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "painkiller",
+      "name": "Painkiller",
+      "selection_number": 93,
+      "occasions": [
+        "summer"
+      ],
+      "recipe_source": null,
+      "recipe_status": "needs_online_source",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "jungle-bird",
+      "name": "Jungle Bird",
+      "selection_number": 94,
+      "occasions": [
+        "summer"
+      ],
+      "recipe_source": null,
+      "recipe_status": "needs_online_source",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "corpse-reviver-no-2",
+      "name": "Corpse Reviver No. 2",
+      "selection_number": 95,
+      "occasions": [
+        "brunch"
+      ],
+      "recipe_source": null,
+      "recipe_status": "needs_online_source",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "pisco-punch",
+      "name": "Pisco Punch",
+      "selection_number": 96,
+      "occasions": [
+        "summer"
+      ],
+      "recipe_source": null,
+      "recipe_status": "needs_online_source",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "south-side",
+      "name": "South Side",
+      "selection_number": 97,
+      "occasions": [
+        "summer"
+      ],
+      "recipe_source": null,
+      "recipe_status": "needs_online_source",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "gin-basil-smash",
+      "name": "Gin Basil Smash",
+      "selection_number": 98,
+      "occasions": [
+        "summer"
+      ],
+      "recipe_source": null,
+      "recipe_status": "needs_online_source",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "porn-star-martini",
+      "name": "Porn Star Martini",
+      "selection_number": 99,
+      "occasions": [
+        "date"
+      ],
+      "recipe_source": null,
+      "recipe_status": "needs_online_source",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    },
+    {
+      "id": "bees-knees",
+      "name": "Bee’s Knees",
+      "selection_number": 100,
+      "occasions": [
+        "cozy"
+      ],
+      "recipe_source": null,
+      "recipe_status": "needs_online_source",
+      "photo_status": "needs_exact_photo_and_license",
+      "photo": null
+    }
+  ]
+}
