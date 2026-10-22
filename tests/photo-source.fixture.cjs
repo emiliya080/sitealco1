@@ -1,0 +1,2 @@
+// Stand-in images test layout only. These do not verify remote photo availability or quality.
+module.exports=async function(page){await page.route('https://images.unsplash.com/**',route=>route.fulfill({contentType:'image/svg+xml',body:'<svg xmlns="http://www.w3.org/2000/svg" width="3840" height="2160"><defs><linearGradient id="a"><stop stop-color="#111511"/><stop offset="1" stop-color="#79664b"/></linearGradient></defs><path fill="url(#a)" d="M0 0h3840v2160H0z"/></svg>'}))};

@@ -1,18 +1,38 @@
-/* Native scroll controls a paused video when a prepared local clip is available. */
-(function(){'use strict';const body=document.body,control=document.querySelector('#photo-motion');if(!control)return;const reduce=matchMedia('(prefers-reduced-motion: reduce)');const hero=document.querySelector('.hero'),scene=document.querySelector('.photo-interlude');let off=false,queued=false,still=false;try{off=localStorage.getItem('dg-story-motion')==='off'}catch{}
-const video=scene.querySelector('.photo-scene-video');let progress=0,target=0,ready=false,failed=false,loading=false,loadVideo=()=>{};
-function seek(){if(!ready||failed||still||video.seeking)return;const end=Math.max(0,video.duration-.05);target=Math.min(end,progress*end);if(Math.abs(video.currentTime-target)>.035){try{video.currentTime=target}catch{}}}
-if(video&&video.dataset.src){
- const fail=()=>{failed=true;scene.classList.remove('has-video');video.removeAttribute('src');video.load()};
- video.addEventListener('error',fail,{once:true});
- video.addEventListener('loadeddata',()=>{if(!Number.isFinite(video.duration)||video.duration<=0){fail();return}ready=true;scene.classList.add('has-video');seek()},{once:true});
- video.addEventListener('seeked',seek);
- const load=loadVideo=async()=>{if(loading||video.getAttribute('src')||failed||still)return;loading=true;try{const response=await fetch(video.dataset.src);if(!response.ok)throw Error('Video unavailable');const blob=await response.blob();const url=URL.createObjectURL(blob);video.src=url;video.addEventListener('error',()=>URL.revokeObjectURL(url),{once:true});video.load()}catch{fail()}finally{loading=false}};
- if('IntersectionObserver' in window){const near=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting))load()},{rootMargin:'600px'});near.observe(scene);control.addEventListener('change',()=>{if(control.checked)load()})}else load();
-}
-function render(){queued=false;if(still)return;const p=Math.max(0,Math.min(1,scrollY/Math.max(1,hero.offsetHeight)));hero.style.setProperty('--hero-shift',(p*45).toFixed(1)+'px');hero.style.setProperty('--phone-shift',(-p*18).toFixed(1)+'px');const box=scene.getBoundingClientRect();progress=Math.max(0,Math.min(1,-box.top/Math.max(1,scene.offsetHeight-innerHeight)));seek();scene.style.setProperty('--photo-pan',(-progress*30).toFixed(1)+'px');scene.style.setProperty('--photo-zoom',(1+progress*.075).toFixed(4))}
-function schedule(){if(!queued&&!still){queued=true;requestAnimationFrame(render)}}
-function mode(){still=off||reduce.matches||(innerHeight<520&&innerWidth>innerHeight);body.classList.toggle('photo-still',still);control.checked=!still;control.disabled=reduce.matches;body.classList.add('photo-enhanced');if(!still&&scene.getBoundingClientRect().top<innerHeight+600)loadVideo();schedule()}
-const observer='IntersectionObserver' in window?new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target)}},{threshold:.08,rootMargin:'0px 0px -20px 0px'}):null;
-document.querySelectorAll('.home-action-grid>a,.feature-card,.collection-card,.drink-card,.features>h2,.home-actions>h2,.about-teaser,[data-view="popular"]').forEach(el=>{el.classList.add('photo-reveal');if(observer)observer.observe(el);else el.classList.add('is-visible')});
-control.addEventListener('change',()=>{off=!control.checked;try{localStorage.setItem('dg-story-motion',off?'off':'on')}catch{}mode()});reduce.addEventListener('change',mode);window.addEventListener('scroll',schedule,{passive:true});window.addEventListener('resize',mode);window.addEventListener('pageshow',schedule);mode();})();
+/* Scroll changes the camera and crossfades real photographs; no video playback. */
+(function () {
+ 'use strict';
+ const body=document.body,control=document.querySelector('#photo-motion');
+ if(!control)return;
+ const reduce=matchMedia('(prefers-reduced-motion: reduce)'),hero=document.querySelector('.hero'),scene=document.querySelector('.photo-interlude');
+ const slides=[...scene.querySelectorAll('.photo-slide')],chapters=[...scene.querySelectorAll('[data-chapter]')];
+ let off=false,still=false,frame=0,target=0,position=0,last=0,active=-1;
+ try{off=localStorage.getItem('dg-story-motion')==='off'}catch{}
+ const clamp=x=>Math.max(0,Math.min(1,x));
+ const smooth=x=>{x=clamp(x);return x*x*(3-2*x)};
+ function paint(p){
+  const fades=[1-smooth((p-.26)/.14),smooth((p-.26)/.14)*(1-smooth((p-.60)/.14)),smooth((p-.60)/.14)];
+  const next=p<.33?0:p<.67?1:2;
+  if(next!==active){active=next;slides.forEach((slide,i)=>{slide.classList.toggle('is-active',i===next);slide.inert=i!==next;slide.setAttribute('aria-hidden',String(i!==next))});chapters.forEach((b,i)=>{if(i===next)b.setAttribute('aria-current','true');else b.removeAttribute('aria-current')})}
+  slides.forEach((slide,i)=>{const local=clamp((p-i*.33+.08)/.48);slide.style.opacity=fades[i].toFixed(4);slide.style.setProperty('--photo-zoom',(1.025+local*.095).toFixed(4));slide.style.setProperty('--photo-pan',(-local*1.2).toFixed(3)+'%');slide.style.setProperty('--copy-shift',still?'0px':((.5-local)*24).toFixed(2)+'px')});
+  scene.style.setProperty('--scene-progress',p.toFixed(4));
+  // Kept on the section for diagnostics and camera regression checks.
+  scene.style.setProperty('--photo-zoom',(1.025+p*.095).toFixed(4));
+ }
+ function update(now){
+  frame=0;const dt=Math.min(64,now-(last||now-16));last=now;
+  position=still?target:position+(target-position)*(1-Math.exp(-dt/110));
+  if(Math.abs(target-position)<.0002)position=target;
+  paint(position);
+  if(!still){const p=clamp(scrollY/Math.max(1,hero.offsetHeight));hero.style.setProperty('--hero-shift',(p*30).toFixed(1)+'px');hero.style.setProperty('--phone-shift',(-p*12).toFixed(1)+'px')}
+  if(!still&&Math.abs(target-position)>.0002)frame=requestAnimationFrame(update);else last=0;
+ }
+ function schedule(){if(!frame)frame=requestAnimationFrame(update)}
+ function scroll(){if(still)return;const box=scene.getBoundingClientRect();target=clamp(-box.top/Math.max(1,scene.offsetHeight-scene.querySelector('.photo-sticky').offsetHeight));schedule()}
+ function mode(){still=off||reduce.matches;body.classList.toggle('photo-still',still);control.checked=!still;control.disabled=reduce.matches;body.classList.add('photo-enhanced');if(still){target=position=[0,.5,1][Math.max(0,active)];schedule()}else scroll()}
+ slides.forEach(slide=>{const img=slide.querySelector('img');const loaded=()=>{img.classList.add('is-loaded');slide.classList.remove('load-failed')};const error=()=>{slide.classList.add('load-failed');scene.querySelector('.photo-load-error').hidden=false};img.addEventListener('load',loaded);img.addEventListener('error',error);if(img.complete){if(img.naturalWidth)loaded();else error()}});
+ chapters.forEach(button=>button.addEventListener('click',()=>{const i=Number(button.dataset.chapter),p=[0,.5,1][i];if(still){target=position=p;paint(p)}else{const top=scrollY+scene.getBoundingClientRect().top;window.scrollTo({top:top+p*(scene.offsetHeight-scene.querySelector('.photo-sticky').offsetHeight),behavior:'smooth'})}}));
+ const observer='IntersectionObserver' in window?new IntersectionObserver(entries=>{for(const e of entries)if(e.isIntersecting){e.target.classList.add('is-visible');observer.unobserve(e.target)}},{threshold:.08}):null;
+ document.querySelectorAll('.home-action-grid>a,.feature-card,.collection-card,.drink-card,.features>h2,.home-actions>h2,.about-teaser,[data-view="popular"]').forEach(el=>{el.classList.add('photo-reveal');if(observer)observer.observe(el);else el.classList.add('is-visible')});
+ control.addEventListener('change',()=>{off=!control.checked;try{localStorage.setItem('dg-story-motion',off?'off':'on')}catch{}mode()});
+ reduce.addEventListener('change',mode);window.addEventListener('scroll',scroll,{passive:true});window.addEventListener('resize',mode);window.addEventListener('pageshow',scroll);mode();
+})();
