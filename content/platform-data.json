@@ -119,6 +119,20 @@
       "unit": "г",
       "abv": 0,
       "category": "Прочее"
+    },
+    {
+      "id": "strawberry",
+      "name": "Клубника",
+      "unit": "г",
+      "abv": 0,
+      "category": "Ягоды"
+    },
+    {
+      "id": "orange",
+      "name": "Апельсиновый сок",
+      "unit": "мл",
+      "abv": 0,
+      "category": "Сок"
     }
   ],
   "recipes": [
