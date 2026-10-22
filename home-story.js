@@ -32,6 +32,7 @@
     el.style.setProperty('--curtain',still?'0%':(Math.max(0,.5-p)*22).toFixed(3)+'%');
     el.style.setProperty('--zero-scale',still?'1':(1.08-p*.06).toFixed(4));
    }else if(type==='finale')el.style.setProperty('--finale-x',still?'0px':((1-p)*28).toFixed(2)+'px');
+   else if(type==='footer')el.style.setProperty('--footer-pan',still?'0px':((p-.5)*50).toFixed(2)+'px');
   }
   for(const el of reveals){const r=el.getBoundingClientRect();const visible=still||!wide.matches?1:clamp((innerHeight-r.top)/Math.min(220,innerHeight*.28));el.style.setProperty('--reveal',visible.toFixed(4))}
   if(pending&&!still)frame=requestAnimationFrame(update);else last=0;

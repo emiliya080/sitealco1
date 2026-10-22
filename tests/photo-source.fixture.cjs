@@ -1,2 +1,0 @@
-// Test stand-ins verify layout and behavior only, never remote availability, subjects or quality.
-module.exports=async function(page){for(const host of ['images.unsplash.com','www.thecocktaildb.com'])await page.route('https://'+host+'/**',route=>route.fulfill({contentType:'image/svg+xml',body:'<svg xmlns="http://www.w3.org/2000/svg" width="3840" height="2160"><defs><linearGradient id="a"><stop stop-color="#111511"/><stop offset="1" stop-color="#79664b"/></linearGradient></defs><path fill="url(#a)" d="M0 0h3840v2160H0z"/></svg>'}))};

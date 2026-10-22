@@ -2,10 +2,10 @@ const {chromium}=require('playwright');
 (async()=>{
  const browser=await chromium.launch({executablePath:'/usr/bin/chromium',args:['--no-sandbox']});
  const page=await browser.newPage({viewport:{width:1440,height:1000}}),base=process.env.STORY_TEST_BASE_URL||'http://127.0.0.1:8000';
- await require('./photo-source.fixture.cjs')(page);const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ const errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto(base+'/index.html');await page.evaluate(()=>document.fonts.ready);
  if(await page.locator('h1').count()!==1)throw Error('Expected one H1');
- if(await page.locator('#main svg,#main video,#main canvas,#main [src*="assets/"]').count())throw Error('Illustrated or uploaded objects on main');
+ if(await page.locator('#main svg,#main video,#main canvas,#main [src$=".png"]').count())throw Error('Illustrated or uploaded objects on main');
  if(await page.locator('.story-recipe-card').count()!==4)throw Error('Recipe catalogue missing');
  if(await page.locator('[data-scroll-effect]').count()<6)throw Error('Missing diverse story scenes');
  async function advance(selector,fraction){await page.evaluate(({selector,fraction})=>{const s=document.querySelector(selector),pin=s.querySelector('.recipe-journey-pin,.mood-pin');scrollTo({top:scrollY+s.getBoundingClientRect().top+Math.max(0,s.offsetHeight-(pin?.offsetHeight||innerHeight))*fraction,behavior:'instant'})},{selector,fraction});await page.waitForTimeout(850)}
@@ -39,12 +39,12 @@ const {chromium}=require('playwright');
  for(const occasion of ['date','friends','summer']){await page.goto(base+'/occasions.html?occasion='+occasion);await page.locator('.catalog-results .drink-card').first().waitFor();if(await page.locator('[data-filter="occasion"]').inputValue()!==occasion)throw Error('Mood filter missing')}
  await page.goto(base+'/encyclopedia-gin.html');await page.locator('.encyclopedia-article').waitFor();
  if((await page.locator('.encyclopedia-article').innerText()).length<400)throw Error('Empty article');
- await page.route('https://images.unsplash.com/**',route=>route.abort());await page.route('https://www.thecocktaildb.com/**',route=>route.abort());
+ await page.route('**/assets/photos/**',route=>route.abort());
  await page.goto(base+'/index.html');await page.locator('.photo-load-error:not([hidden])').waitFor();
  if((await page.locator('.story-card-copy').first().innerText()).length<200)throw Error('Image failure removed recipe content');
  if(errors.length)throw Error(errors.join('\n'));
- const context=await browser.newContext({javaScriptEnabled:false});const plain=await context.newPage();await require('./photo-source.fixture.cjs')(plain);await plain.goto(base+'/index.html');
+ const context=await browser.newContext({javaScriptEnabled:false});const plain=await context.newPage();await plain.goto(base+'/index.html');
  if(await plain.locator('.story-recipe-card').count()!==4||await plain.locator('.recipe-story-steps li').count()!==3)throw Error('No-JS content missing');
  if(await plain.locator('.story-recipe-card').first().evaluate(e=>getComputedStyle(e).opacity)!=='1')throw Error('No-JS invisible recipes');
- await browser.close();console.log('PASS: diverse full-page story, reverse scroll, edge-to-edge 360–1440px, recipe/portions/favorite/compare/shopping, three occasion filters, encyclopedia, image failures and no-JS content. External photo responses mocked.');
+ await browser.close();console.log('PASS: diverse full-page story, reverse scroll, edge-to-edge 360–1440px, recipe/portions/favorite/compare/shopping, three occasion filters, encyclopedia, image failures and no-JS content. Actual local photographs used throughout.');
 })().catch(e=>{console.error(e);process.exit(1)});

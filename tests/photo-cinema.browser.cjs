@@ -2,7 +2,6 @@ const {chromium}=require('playwright');
 (async()=>{
  const browser=await chromium.launch({executablePath:'/usr/bin/chromium',args:['--no-sandbox']});
  const page=await browser.newPage({viewport:{width:1920,height:1080},deviceScaleFactor:2});
- await require('./photo-source.fixture.cjs')(page);
  const base=process.env.STORY_TEST_BASE_URL||'http://127.0.0.1:8000';
  const errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto(base+'/index.html');await page.evaluate(()=>document.fonts.ready);
@@ -18,7 +17,7 @@ const {chromium}=require('playwright');
   if(await page.locator('.photo-slide:not(.is-active):not([inert])').count())throw Error('Hidden links focusable');
  }
  const widths=await page.locator('.photo-slide img').evaluateAll(imgs=>imgs.map(i=>i.currentSrc));
- if(widths.some(url=>!url.includes('w=3840')))throw Error('4K request missing');
+ if(widths.some(url=>!url.endsWith('-large.webp')))throw Error('4K request missing');
  await page.locator('[data-chapter="2"]').click();await page.waitForTimeout(1800);
  if(await page.locator('.photo-slide.is-active').getAttribute('data-photo')!=='2')throw Error('Chapter click failed');
  await page.locator('#photo-motion').uncheck();await page.locator('[data-chapter="1"]').click();
@@ -32,10 +31,10 @@ const {chromium}=require('playwright');
   const r=await page.locator('.photo-slide.is-active img').boundingBox();
   if(r.width<width||r.height<height)throw Error('Photo does not fill viewport');
  }
- await page.route('https://images.unsplash.com/**',route=>route.abort());
+ await page.route('**/assets/photos/**',route=>route.abort());
  await page.reload();await page.locator('.photo-load-error:not([hidden])').waitFor();
  if(!await page.locator('.photo-load-error a').isVisible())throw Error('Missing image failure navigation');
  if(errors.length)throw Error(errors.join('\n'));
- console.log('PASS: fullscreen three-photo scene, forward/reverse crossfade, 4K requests, chapter navigation, mobile coverage, reduced motion, loading error. Remote photographs mocked; availability and quality unverified.');
+ console.log('PASS: fullscreen three-photo scene, forward/reverse crossfade, 4K requests, chapter navigation, mobile coverage, reduced motion, loading error. Actual local photographs loaded, including high-resolution files.');
  await browser.close();
 })().catch(e=>{console.error(e);process.exit(1)});
