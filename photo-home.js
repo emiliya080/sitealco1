@@ -1,13 +1,13 @@
 /* Native scroll controls a paused video when a prepared local clip is available. */
 (function(){'use strict';const body=document.body,control=document.querySelector('#photo-motion');if(!control)return;const reduce=matchMedia('(prefers-reduced-motion: reduce)');const hero=document.querySelector('.hero'),scene=document.querySelector('.photo-interlude');let off=false,queued=false,still=false;try{off=localStorage.getItem('dg-story-motion')==='off'}catch{}
-const video=scene.querySelector('.photo-scene-video');let progress=0,target=0,ready=false,failed=false,loadVideo=()=>{};
+const video=scene.querySelector('.photo-scene-video');let progress=0,target=0,ready=false,failed=false,loading=false,loadVideo=()=>{};
 function seek(){if(!ready||failed||still||video.seeking)return;const end=Math.max(0,video.duration-.05);target=Math.min(end,progress*end);if(Math.abs(video.currentTime-target)>.035){try{video.currentTime=target}catch{}}}
 if(video&&video.dataset.src){
  const fail=()=>{failed=true;scene.classList.remove('has-video');video.removeAttribute('src');video.load()};
  video.addEventListener('error',fail,{once:true});
  video.addEventListener('loadeddata',()=>{if(!Number.isFinite(video.duration)||video.duration<=0){fail();return}ready=true;scene.classList.add('has-video');seek()},{once:true});
  video.addEventListener('seeked',seek);
- const load=loadVideo=()=>{if(video.getAttribute('src')||failed||still)return;video.src=video.dataset.src;video.load()};
+ const load=loadVideo=async()=>{if(loading||video.getAttribute('src')||failed||still)return;loading=true;try{const response=await fetch(video.dataset.src);if(!response.ok)throw Error('Video unavailable');const blob=await response.blob();const url=URL.createObjectURL(blob);video.src=url;video.addEventListener('error',()=>URL.revokeObjectURL(url),{once:true});video.load()}catch{fail()}finally{loading=false}};
  if('IntersectionObserver' in window){const near=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting))load()},{rootMargin:'600px'});near.observe(scene);control.addEventListener('change',()=>{if(control.checked)load()})}else load();
 }
 function render(){queued=false;if(still)return;const p=Math.max(0,Math.min(1,scrollY/Math.max(1,hero.offsetHeight)));hero.style.setProperty('--hero-shift',(p*45).toFixed(1)+'px');hero.style.setProperty('--phone-shift',(-p*18).toFixed(1)+'px');const box=scene.getBoundingClientRect();progress=Math.max(0,Math.min(1,-box.top/Math.max(1,scene.offsetHeight-innerHeight)));seek();scene.style.setProperty('--photo-pan',(-progress*30).toFixed(1)+'px');scene.style.setProperty('--photo-zoom',(1+progress*.075).toFixed(4))}
