@@ -494,7 +494,7 @@
       "alcoholic": false,
       "type": "Безалкогольный",
       "tile": null,
-      "photoLabel": "Схематичная иллюстрация",
+      "photoLabel": "Фотореалистичное изображение, созданное для проекта",
       "substitutions": [
         {
           "fromId": "lime",
@@ -557,7 +557,7 @@
       "alcoholic": false,
       "type": "Безалкогольный",
       "tile": null,
-      "photoLabel": "Схематичная иллюстрация",
+      "photoLabel": "Фотореалистичное изображение, созданное для проекта",
       "substitutions": []
     },
     {
@@ -607,7 +607,7 @@
       "alcoholic": false,
       "type": "Безалкогольный",
       "tile": null,
-      "photoLabel": "Схематичная иллюстрация",
+      "photoLabel": "Фотореалистичное изображение, созданное для проекта",
       "substitutions": [
         {
           "fromId": "lime",
