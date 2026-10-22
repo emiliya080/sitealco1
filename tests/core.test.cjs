@@ -1,0 +1,13 @@
+const assert=require('node:assert/strict');
+const C=require('../platform-core.js');const data=require('../content/platform-data.json');const ing=C.index(data);const get=id=>data.recipes.find(r=>r.id===id);
+assert.equal(C.abv(get('negroni'),ing),27);
+assert.equal(C.volume(get('mojito'),ing),150);
+assert.equal(C.abv(get('virgin-mojito'),ing),0);
+assert.equal(C.strength(get('margarita'),ing),'Крепкий');
+const shopping=C.shopping({margarita:4,mojito:6},data.recipes,ing,{lime:100,tequila:500});
+assert.equal(shopping.find(i=>i.id==='lime').total,250);assert.equal(shopping.find(i=>i.id==='lime').missing,150);assert.equal(shopping.find(i=>i.id==='tequila').missing,0);assert.equal(shopping.find(i=>i.id==='ice').total,1000);
+assert.equal(C.availability(get('negroni'),{gin:30,vermouth:30,campari:30}).group,0);assert.equal(C.availability(get('negroni'),{gin:30,vermouth:30}).group,1);assert.equal(C.availability(get('negroni'),{}).group,2);
+assert.equal(C.matches(get('mojito'),{query:'МЯТА',base:'Ром',occasion:'summer'},ing),true);assert.equal(C.matches(get('mojito'),{taste:'Горький'},ing),false);assert.equal(C.matches(get('margarita'),{minutes:5},ing),false);
+const substitute=C.substitute(get('margarita'),'orange-liqueur','triple-sec');assert.equal(substitute.parts.find(i=>i.id==='triple-sec').amount,25);assert.ok(C.abv(substitute,ing)<C.abv(get('margarita'),ing));assert.equal(C.substitute(get('negroni'),'gin','vodka'),get('negroni'));
+const safe=C.validState({compare:['negroni','margarita','mojito','cranberry','cosmopolitan'],party:{mojito:6,margarita:-1,nope:3},pantry:{lime:NaN,gin:-1,soda:100},favorites:['negroni','negroni','unknown'],custom:[{name:'Mine',description:'D',parts:[{id:'soda',amount:30}]}]},data);assert.deepEqual(safe.favorites,['negroni']);assert.equal(safe.compare.length,4);assert.deepEqual(safe.party,{mojito:6});assert.deepEqual(safe.pantry,{soda:100});
+console.log('PASS: ABV, non-alcoholic recipes, shopping aggregation/subtraction, availability groups, combined filters, constrained substitutions, untrusted local-state validation');
