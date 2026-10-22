@@ -1,8 +1,18 @@
-/* Only camera motion and gentle content reveals. No illustrated figures or automatic sound. */
+/* Native scroll controls a paused video when a prepared local clip is available. */
 (function(){'use strict';const body=document.body,control=document.querySelector('#photo-motion');if(!control)return;const reduce=matchMedia('(prefers-reduced-motion: reduce)');const hero=document.querySelector('.hero'),scene=document.querySelector('.photo-interlude');let off=false,queued=false,still=false;try{off=localStorage.getItem('dg-story-motion')==='off'}catch{}
-function render(){queued=false;if(still)return;const p=Math.max(0,Math.min(1,scrollY/Math.max(1,hero.offsetHeight)));hero.style.setProperty('--hero-shift',(p*45).toFixed(1)+'px');hero.style.setProperty('--phone-shift',(-p*18).toFixed(1)+'px');const box=scene.getBoundingClientRect(),progress=Math.max(0,Math.min(1,-box.top/Math.max(1,scene.offsetHeight-innerHeight)));scene.style.setProperty('--photo-pan',(-progress*30).toFixed(1)+'px');scene.style.setProperty('--photo-zoom',(1+progress*.075).toFixed(4))}
+const video=scene.querySelector('.photo-scene-video');let progress=0,target=0,ready=false,failed=false,loadVideo=()=>{};
+function seek(){if(!ready||failed||still||video.seeking)return;const end=Math.max(0,video.duration-.05);target=Math.min(end,progress*end);if(Math.abs(video.currentTime-target)>.035){try{video.currentTime=target}catch{}}}
+if(video&&video.dataset.src){
+ const fail=()=>{failed=true;scene.classList.remove('has-video');video.removeAttribute('src');video.load()};
+ video.addEventListener('error',fail,{once:true});
+ video.addEventListener('loadeddata',()=>{if(!Number.isFinite(video.duration)||video.duration<=0){fail();return}ready=true;scene.classList.add('has-video');seek()},{once:true});
+ video.addEventListener('seeked',seek);
+ const load=loadVideo=()=>{if(video.getAttribute('src')||failed||still)return;video.src=video.dataset.src;video.load()};
+ if('IntersectionObserver' in window){const near=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting))load()},{rootMargin:'600px'});near.observe(scene);control.addEventListener('change',()=>{if(control.checked)load()})}else load();
+}
+function render(){queued=false;if(still)return;const p=Math.max(0,Math.min(1,scrollY/Math.max(1,hero.offsetHeight)));hero.style.setProperty('--hero-shift',(p*45).toFixed(1)+'px');hero.style.setProperty('--phone-shift',(-p*18).toFixed(1)+'px');const box=scene.getBoundingClientRect();progress=Math.max(0,Math.min(1,-box.top/Math.max(1,scene.offsetHeight-innerHeight)));seek();scene.style.setProperty('--photo-pan',(-progress*30).toFixed(1)+'px');scene.style.setProperty('--photo-zoom',(1+progress*.075).toFixed(4))}
 function schedule(){if(!queued&&!still){queued=true;requestAnimationFrame(render)}}
-function mode(){still=off||reduce.matches||(innerHeight<520&&innerWidth>innerHeight);body.classList.toggle('photo-still',still);control.checked=!still;control.disabled=reduce.matches;body.classList.add('photo-enhanced');schedule()}
+function mode(){still=off||reduce.matches||(innerHeight<520&&innerWidth>innerHeight);body.classList.toggle('photo-still',still);control.checked=!still;control.disabled=reduce.matches;body.classList.add('photo-enhanced');if(!still&&scene.getBoundingClientRect().top<innerHeight+600)loadVideo();schedule()}
 const observer='IntersectionObserver' in window?new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target)}},{threshold:.08,rootMargin:'0px 0px -20px 0px'}):null;
 document.querySelectorAll('.home-action-grid>a,.feature-card,.collection-card,.drink-card,.features>h2,.home-actions>h2,.about-teaser,[data-view="popular"]').forEach(el=>{el.classList.add('photo-reveal');if(observer)observer.observe(el);else el.classList.add('is-visible')});
 control.addEventListener('change',()=>{off=!control.checked;try{localStorage.setItem('dg-story-motion',off?'off':'on')}catch{}mode()});reduce.addEventListener('change',mode);window.addEventListener('scroll',schedule,{passive:true});window.addEventListener('resize',mode);window.addEventListener('pageshow',schedule);mode();})();
