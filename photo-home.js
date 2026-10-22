@@ -23,7 +23,7 @@
   position=still?target:position+(target-position)*(1-Math.exp(-dt/110));
   if(Math.abs(target-position)<.0002)position=target;
   paint(position);
-  if(!still){const p=clamp(scrollY/Math.max(1,hero.offsetHeight));hero.style.setProperty('--hero-shift',(p*30).toFixed(1)+'px');hero.style.setProperty('--phone-shift',(-p*12).toFixed(1)+'px')}
+  if(!still&&hero){const p=clamp(scrollY/Math.max(1,hero.offsetHeight));hero.style.setProperty('--hero-shift',(p*30).toFixed(1)+'px');hero.style.setProperty('--phone-shift',(-p*12).toFixed(1)+'px')}
   if(!still&&Math.abs(target-position)>.0002)frame=requestAnimationFrame(update);else last=0;
  }
  function schedule(){if(!frame)frame=requestAnimationFrame(update)}
