@@ -17,7 +17,7 @@ const {chromium}=require('playwright');
   if(await page.locator('.photo-slide:not(.is-active):not([inert])').count())throw Error('Hidden links focusable');
  }
  const widths=await page.locator('.photo-slide img').evaluateAll(imgs=>imgs.map(i=>i.currentSrc));
- if(widths.some(url=>!url.endsWith('-large.webp')))throw Error('4K request missing');
+ if(widths.some(url=>!url.endsWith('-large.webp')))throw Error('Highest native photo version not selected');
  await page.locator('[data-chapter="2"]').click();await page.waitForTimeout(1800);
  if(await page.locator('.photo-slide.is-active').getAttribute('data-photo')!=='2')throw Error('Chapter click failed');
  await page.locator('#photo-motion').uncheck();await page.locator('[data-chapter="1"]').click();
@@ -35,6 +35,6 @@ const {chromium}=require('playwright');
  await page.reload();await page.locator('.photo-load-error:not([hidden])').waitFor();
  if(!await page.locator('.photo-load-error a').isVisible())throw Error('Missing image failure navigation');
  if(errors.length)throw Error(errors.join('\n'));
- console.log('PASS: fullscreen three-photo scene, forward/reverse crossfade, 4K requests, chapter navigation, mobile coverage, reduced motion, loading error. Actual local photographs loaded, including high-resolution files.');
+ console.log('PASS: fullscreen three-photo scene, forward/reverse crossfade, highest native photo versions, chapter navigation, mobile coverage, reduced motion, loading error. Actual local photographs loaded, including high-resolution files.');
  await browser.close();
 })().catch(e=>{console.error(e);process.exit(1)});

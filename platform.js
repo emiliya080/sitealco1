@@ -20,7 +20,7 @@ const photoRecord=r=>media?.photos?.[media?.recipes?.[r.id]];
 function photo(r){
  if(r.photo&&apiBase&&/^[a-f0-9]{32}$/.test(r.photo))return `<img class="page-photo" src="${apiBase}/media/${r.photo}" alt="${esc(r.name)}" loading="lazy">`;
  const row=photoRecord(r);if(!row)return '<div class="photo-placeholder"><span>Фотография пока не добавлена</span></div>';
- const variants=row.variants,srcset=variants.map(v=>esc(v.src)+' '+v.width+'w').join(', ');
+ const variants=row.variants,srcset=Array.from(new Map(variants.map(v=>[v.width,v])).values()).sort((a,b)=>a.width-b.width).map(v=>esc(v.src)+' '+v.width+'w').join(', ');
  return `<img class="page-photo real-recipe-photo" src="${esc(variants[1].src)}" srcset="${srcset}" sizes="(max-width:700px) 92vw,(max-width:1200px) 45vw,33vw" alt="${esc(row.alt)}" loading="lazy" decoding="async">`;
 }
 function photoNote(r){if(r.photo&&apiBase)return esc(r.photoLabel||'Фото рецепта');const row=photoRecord(r);if(!row)return 'Фотография пока не опубликована';return esc(row.alt)+' · <a href="photos.html#photo-'+esc(media.recipes[r.id])+'">Фото: '+esc(row.author)+' · '+esc(row.license)+'</a>'}
