@@ -5,7 +5,7 @@ ROOT=Path(__file__).resolve().parents[1]
 class Photos(unittest.TestCase):
  def test_real_resolution_and_sources(self):
   manifest=json.loads((ROOT/'content/photo-manifest.json').read_text())
-  self.assertEqual(len(manifest['recipes']),9)
+  self.assertEqual(len(manifest['recipes']),10)
   for key,photo in manifest['photos'].items():
    with self.subTest(photo=key):
     if photo.get('userProvided'):

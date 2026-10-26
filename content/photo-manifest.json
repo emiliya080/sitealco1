@@ -161,156 +161,156 @@
     "negroni": {
       "alt": "Негрони с апельсиновой цедрой",
       "sourceTitle": "File:Negroni (cocktail).jpg",
-      "source": "https://commons.wikimedia.org/wiki/File:Negroni_(cocktail).jpg",
-      "original": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Negroni_%28cocktail%29.jpg",
-      "originalWidth": 4032,
-      "originalHeight": 3024,
-      "nativeWidth": 4032,
-      "nativeHeight": 3024,
-      "author": "Sudhertzen",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "changes": "WebP-конверсия и уменьшение без увеличения исходника; адаптивное кадрирование при показе.",
+      "source": null,
+      "original": "assets/photos/negroni-studio-large.webp",
+      "originalWidth": 1122,
+      "originalHeight": 1402,
+      "nativeWidth": 1122,
+      "nativeHeight": 1402,
+      "author": "Фотография предоставлена пользователем; автор не указан",
+      "license": "Предоставлено пользователем для оформления сайта",
+      "licenseUrl": null,
+      "changes": "Файл заменён пользователем через GitHub; подготовлена уменьшенная мобильная версия без увеличения разрешения.",
       "crop": null,
-      "userProvided": false,
+      "userProvided": true,
       "backgroundRetouched": false,
       "editedMaster": null,
       "peopleFree": true,
       "variants": [
         {
           "src": "assets/photos/negroni-studio-small.webp",
-          "width": 960,
-          "height": 720,
-          "bytes": 37208
+          "width": 768,
+          "height": 960,
+          "bytes": 122376
         },
         {
           "src": "assets/photos/negroni-studio-medium.webp",
-          "width": 1920,
-          "height": 1440,
-          "bytes": 206348
+          "width": 1122,
+          "height": 1402,
+          "bytes": 143454
         },
         {
           "src": "assets/photos/negroni-studio-large.webp",
-          "width": 3840,
-          "height": 2880,
-          "bytes": 1641376
+          "width": 1122,
+          "height": 1402,
+          "bytes": 143454
         }
       ]
     },
     "margarita": {
       "alt": "Маргарита с солёным краем бокала",
       "sourceTitle": "File:Klassiche Margarita.jpg",
-      "source": "https://commons.wikimedia.org/wiki/File:Klassiche_Margarita.jpg",
-      "original": "https://upload.wikimedia.org/wikipedia/commons/0/09/Klassiche_Margarita.jpg",
-      "originalWidth": 2304,
-      "originalHeight": 3456,
-      "nativeWidth": 2304,
-      "nativeHeight": 3456,
-      "author": "Cocktailmarler",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "changes": "WebP-конверсия и уменьшение без увеличения исходника; адаптивное кадрирование при показе.",
+      "source": null,
+      "original": "assets/photos/margarita-studio-large.webp",
+      "originalWidth": 1122,
+      "originalHeight": 1402,
+      "nativeWidth": 1122,
+      "nativeHeight": 1402,
+      "author": "Фотография предоставлена пользователем; автор не указан",
+      "license": "Предоставлено пользователем для оформления сайта",
+      "licenseUrl": null,
+      "changes": "Файл заменён пользователем через GitHub; подготовлена уменьшенная мобильная версия без увеличения разрешения.",
       "crop": null,
-      "userProvided": false,
+      "userProvided": true,
       "backgroundRetouched": false,
       "editedMaster": null,
       "peopleFree": true,
       "variants": [
         {
           "src": "assets/photos/margarita-studio-small.webp",
-          "width": 640,
+          "width": 768,
           "height": 960,
-          "bytes": 46174
+          "bytes": 95946
         },
         {
           "src": "assets/photos/margarita-studio-medium.webp",
-          "width": 1280,
-          "height": 1920,
-          "bytes": 151212
+          "width": 1122,
+          "height": 1402,
+          "bytes": 107404
         },
         {
           "src": "assets/photos/margarita-studio-large.webp",
-          "width": 2304,
-          "height": 3456,
-          "bytes": 628188
+          "width": 1122,
+          "height": 1402,
+          "bytes": 107404
         }
       ]
     },
     "cosmopolitan": {
       "alt": "Космополитен в бокале на ножке",
       "sourceTitle": "File:Cosmopolitan - CrystalMixer.jpg",
-      "source": "https://commons.wikimedia.org/wiki/File:Cosmopolitan_-_CrystalMixer.jpg",
-      "original": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Cosmopolitan_-_CrystalMixer.jpg",
-      "originalWidth": 4212,
-      "originalHeight": 4188,
-      "nativeWidth": 4212,
-      "nativeHeight": 4188,
-      "author": "CrystalMixer - CrystalMixer.com",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "changes": "WebP-конверсия и уменьшение без увеличения исходника; адаптивное кадрирование при показе.",
+      "source": null,
+      "original": "assets/photos/cosmopolitan-studio-large.webp",
+      "originalWidth": 1122,
+      "originalHeight": 1402,
+      "nativeWidth": 1122,
+      "nativeHeight": 1402,
+      "author": "Фотография предоставлена пользователем; автор не указан",
+      "license": "Предоставлено пользователем для оформления сайта",
+      "licenseUrl": null,
+      "changes": "Файл заменён пользователем через GitHub; подготовлена уменьшенная мобильная версия без увеличения разрешения.",
       "crop": null,
-      "userProvided": false,
+      "userProvided": true,
       "backgroundRetouched": false,
       "editedMaster": null,
       "peopleFree": true,
       "variants": [
         {
           "src": "assets/photos/cosmopolitan-studio-small.webp",
-          "width": 960,
-          "height": 955,
-          "bytes": 17508
+          "width": 768,
+          "height": 960,
+          "bytes": 89560
         },
         {
           "src": "assets/photos/cosmopolitan-studio-medium.webp",
-          "width": 1920,
-          "height": 1909,
-          "bytes": 62376
+          "width": 1122,
+          "height": 1402,
+          "bytes": 100370
         },
         {
           "src": "assets/photos/cosmopolitan-studio-large.webp",
-          "width": 3840,
-          "height": 3818,
-          "bytes": 271452
+          "width": 1122,
+          "height": 1402,
+          "bytes": 100370
         }
       ]
     },
     "mojito": {
       "alt": "Мохито с мятой и льдом на барной стойке",
       "sourceTitle": "File:Mojito im Collegium in Tübingen.jpg",
-      "source": "https://commons.wikimedia.org/wiki/File:Mojito_im_Collegium_in_T%C3%BCbingen.jpg",
-      "original": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Mojito_im_Collegium_in_T%C3%BCbingen.jpg",
-      "originalWidth": 6240,
-      "originalHeight": 4160,
-      "nativeWidth": 2900,
-      "nativeHeight": 4160,
-      "author": "Dktue",
-      "license": "CC0",
-      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-      "changes": "Кадрирование и WebP-конверсия; уменьшение без увеличения исходника.",
-      "crop": "2900x4160+0+0",
-      "userProvided": false,
+      "source": null,
+      "original": "assets/photos/mojito-studio-large.webp",
+      "originalWidth": 1536,
+      "originalHeight": 1024,
+      "nativeWidth": 1536,
+      "nativeHeight": 1024,
+      "author": "Фотография предоставлена пользователем; автор не указан",
+      "license": "Предоставлено пользователем для оформления сайта",
+      "licenseUrl": null,
+      "changes": "Файл заменён пользователем через GitHub; подготовлена уменьшенная мобильная версия без увеличения разрешения.",
+      "crop": null,
+      "userProvided": true,
       "backgroundRetouched": false,
       "editedMaster": null,
       "peopleFree": true,
       "variants": [
         {
           "src": "assets/photos/mojito-studio-small.webp",
-          "width": 669,
-          "height": 960,
-          "bytes": 129226
+          "width": 960,
+          "height": 640,
+          "bytes": 67236
         },
         {
           "src": "assets/photos/mojito-studio-medium.webp",
-          "width": 1338,
-          "height": 1920,
-          "bytes": 935938
+          "width": 1536,
+          "height": 1024,
+          "bytes": 87656
         },
         {
           "src": "assets/photos/mojito-studio-large.webp",
-          "width": 2677,
-          "height": 3840,
-          "bytes": 4651528
+          "width": 1536,
+          "height": 1024,
+          "bytes": 87656
         }
       ]
     },
@@ -781,6 +781,45 @@
           "bytes": 241432
         }
       ]
+    },
+    "bloody-mary": {
+      "alt": "Кровавая Мэри в высоком хрустальном бокале с сельдереем, оливками и лимоном",
+      "sourceTitle": "Изображение пользователя — Кровавая Мэри",
+      "source": null,
+      "original": "assets/photo-edits/bloody-mary.png",
+      "originalWidth": 1536,
+      "originalHeight": 1024,
+      "nativeWidth": 1536,
+      "nativeHeight": 1024,
+      "author": "Изображение предоставлено пользователем; фотографическая версия подготовлена ImageGen",
+      "license": "Предоставлено пользователем для оформления сайта",
+      "licenseUrl": null,
+      "changes": "По изображению пользователя подготовлена фотографическая веб-версия без людей и текста; веб-файлы не увеличены выше разрешения мастера.",
+      "crop": null,
+      "userProvided": true,
+      "backgroundRetouched": true,
+      "editedMaster": "assets/photo-edits/bloody-mary.png",
+      "peopleFree": true,
+      "variants": [
+        {
+          "src": "assets/photos/bloody-mary-studio-small.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 94556
+        },
+        {
+          "src": "assets/photos/bloody-mary-studio-medium.webp",
+          "width": 1536,
+          "height": 1024,
+          "bytes": 210378
+        },
+        {
+          "src": "assets/photos/bloody-mary-studio-large.webp",
+          "width": 1536,
+          "height": 1024,
+          "bytes": 237512
+        }
+      ]
     }
   },
   "recipes": {
@@ -792,6 +831,7 @@
     "virgin-mojito": "virgin-mojito",
     "lemonade": "lemonade",
     "berry-spritz": "berry-spritz",
-    "blue-lagoon": "blue-lagoon"
+    "blue-lagoon": "blue-lagoon",
+    "bloody-mary": "bloody-mary"
   }
 }

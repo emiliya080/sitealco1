@@ -7,7 +7,7 @@ const {chromium}=require('playwright');
  if(await page.locator('h1').count()!==1)throw Error('Expected one H1');
  if(await page.locator('#main svg,#main canvas,#main [src$=".png"]').count())throw Error('Illustrated objects on main');
  if(await page.locator('#main video:not(.ice-scroll-video):not(.recipe-journey-video)').count())throw Error('Unexpected video on main');
- if(await page.locator('.story-recipe-card:not([data-loop-clone])').count()!==5)throw Error('Recipe catalogue missing');
+ if(await page.locator('.story-recipe-card:not([data-loop-clone])').count()!==6)throw Error('Recipe catalogue missing');
  if(await page.locator('[data-scroll-effect]').count()<6)throw Error('Missing diverse story scenes');
  async function advance(selector,fraction){await page.evaluate(({selector,fraction})=>{const s=document.querySelector(selector),pin=s.querySelector('.recipe-journey-pin,.mood-pin');scrollTo({top:scrollY+s.getBoundingClientRect().top+Math.max(0,s.offsetHeight-(pin?.offsetHeight||innerHeight))*fraction,behavior:'instant'})},{selector,fraction});await page.waitForTimeout(850)}
  const recipeVideo=page.locator('.recipe-journey-video');await recipeVideo.evaluate(v=>new Promise((ok,bad)=>{if(v.readyState>=1)return ok();v.addEventListener('loadedmetadata',ok,{once:true});v.addEventListener('error',bad,{once:true})}));
@@ -47,7 +47,7 @@ const {chromium}=require('playwright');
  if((await page.locator('.story-card-copy').first().innerText()).length<200)throw Error('Image failure removed recipe content');
  if(errors.length)throw Error(errors.join('\n'));
  const context=await browser.newContext({javaScriptEnabled:false});const plain=await context.newPage();await plain.goto(base+'/index.html');
- if(await plain.locator('.story-recipe-card').count()!==5||await plain.locator('.recipe-story-steps li').count()!==3)throw Error('No-JS content missing');
+ if(await plain.locator('.story-recipe-card').count()!==6||await plain.locator('.recipe-story-steps li').count()!==3)throw Error('No-JS content missing');
  if(await plain.locator('.story-recipe-card').first().evaluate(e=>getComputedStyle(e).opacity)!=='1')throw Error('No-JS invisible recipes');
  await browser.close();console.log('PASS: diverse full-page story, reverse scroll, edge-to-edge 360–1440px, recipe/portions/favorite/compare/shopping, three occasion filters, encyclopedia, image failures and no-JS content. Actual local photographs used throughout.');
 })().catch(e=>{console.error(e);process.exit(1)});
