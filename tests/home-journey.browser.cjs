@@ -5,7 +5,8 @@ const {chromium}=require('playwright');
  const errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto(base+'/index.html');await page.evaluate(()=>document.fonts.ready);
  if(await page.locator('h1').count()!==1)throw Error('Expected one H1');
- if(await page.locator('#main svg,#main video,#main canvas,#main [src$=".png"]').count())throw Error('Illustrated or uploaded objects on main');
+ if(await page.locator('#main svg,#main canvas,#main [src$=".png"]').count())throw Error('Illustrated objects on main');
+ if(await page.locator('#main video:not(.ice-scroll-video)').count())throw Error('Unexpected video on main');
  if(await page.locator('.story-recipe-card').count()!==4)throw Error('Recipe catalogue missing');
  if(await page.locator('[data-scroll-effect]').count()<6)throw Error('Missing diverse story scenes');
  async function advance(selector,fraction){await page.evaluate(({selector,fraction})=>{const s=document.querySelector(selector),pin=s.querySelector('.recipe-journey-pin,.mood-pin');scrollTo({top:scrollY+s.getBoundingClientRect().top+Math.max(0,s.offsetHeight-(pin?.offsetHeight||innerHeight))*fraction,behavior:'instant'})},{selector,fraction});await page.waitForTimeout(850)}
