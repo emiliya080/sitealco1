@@ -11,6 +11,9 @@ const {chromium}=require('playwright');
  if(await page.locator('[data-scroll-effect]').count()<5)throw Error('Missing diverse story scenes');
  async function advance(selector,fraction){await page.evaluate(({selector,fraction})=>{const s=document.querySelector(selector),pin=s.querySelector('.recipe-journey-pin,.mood-pin,.knowledge-video-inner');scrollTo({top:scrollY+s.getBoundingClientRect().top+Math.max(0,s.offsetHeight-(pin?.offsetHeight||innerHeight))*fraction,behavior:'instant'})},{selector,fraction});await page.waitForTimeout(850)}
  const recipeVideo=page.locator('.recipe-journey-video');await recipeVideo.evaluate(v=>new Promise((ok,bad)=>{if(v.readyState>=1)return ok();v.addEventListener('loadedmetadata',ok,{once:true});v.addEventListener('error',bad,{once:true})}));
+ await page.locator('#negroni-story').evaluate(s=>scrollTo({top:scrollY+s.getBoundingClientRect().top-52,behavior:'instant'}));await page.waitForTimeout(400);
+ const recipeCardBox=await page.locator('.recipe-journey-photo').boundingBox();if(recipeCardBox.y<52||recipeCardBox.y+recipeCardBox.height>1000)throw Error('Recipe video card is clipped before animation');
+ if(await recipeVideo.evaluate(v=>v.currentTime)>.08)throw Error('Recipe animation starts before the full card is visible');
  const recipeTimes=[];for(const [fraction,step] of [[.05,'0'],[.5,'1'],[.9,'2'],[.1,'0']]){await advance('#negroni-story',fraction);if(await page.locator('[data-recipe-step].is-current').getAttribute('data-recipe-step')!==step)throw Error('Wrong recipe step');recipeTimes.push(await recipeVideo.evaluate(v=>v.currentTime))}
  if(!(recipeTimes[0]<recipeTimes[1]&&recipeTimes[1]<recipeTimes[2]&&recipeTimes[3]<recipeTimes[1]))throw Error('Recipe video does not follow steps '+recipeTimes);
  if(await page.locator('#moods,.mood-journey').count())throw Error('Removed mood scene remains on homepage');
