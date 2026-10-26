@@ -8,14 +8,12 @@ const {chromium}=require('playwright');
  if(await page.locator('#main svg,#main canvas,#main [src$=".png"]').count())throw Error('Illustrated objects on main');
  if(await page.locator('#main video:not(.knowledge-scroll-video):not(.recipe-journey-video)').count())throw Error('Unexpected video on main');
  if(await page.locator('.story-recipe-card:not([data-loop-clone])').count()!==6)throw Error('Recipe catalogue missing');
- if(await page.locator('[data-scroll-effect]').count()<6)throw Error('Missing diverse story scenes');
+ if(await page.locator('[data-scroll-effect]').count()<5)throw Error('Missing diverse story scenes');
  async function advance(selector,fraction){await page.evaluate(({selector,fraction})=>{const s=document.querySelector(selector),pin=s.querySelector('.recipe-journey-pin,.mood-pin,.knowledge-video-inner');scrollTo({top:scrollY+s.getBoundingClientRect().top+Math.max(0,s.offsetHeight-(pin?.offsetHeight||innerHeight))*fraction,behavior:'instant'})},{selector,fraction});await page.waitForTimeout(850)}
  const recipeVideo=page.locator('.recipe-journey-video');await recipeVideo.evaluate(v=>new Promise((ok,bad)=>{if(v.readyState>=1)return ok();v.addEventListener('loadedmetadata',ok,{once:true});v.addEventListener('error',bad,{once:true})}));
  const recipeTimes=[];for(const [fraction,step] of [[.05,'0'],[.5,'1'],[.9,'2'],[.1,'0']]){await advance('#negroni-story',fraction);if(await page.locator('[data-recipe-step].is-current').getAttribute('data-recipe-step')!==step)throw Error('Wrong recipe step');recipeTimes.push(await recipeVideo.evaluate(v=>v.currentTime))}
  if(!(recipeTimes[0]<recipeTimes[1]&&recipeTimes[1]<recipeTimes[2]&&recipeTimes[3]<recipeTimes[1]))throw Error('Recipe video does not follow steps '+recipeTimes);
- await advance('#moods',0);const start=await page.locator('#moods').evaluate(e=>parseFloat(e.style.getPropertyValue('--rail-x')));
- await advance('#moods',.9);const end=await page.locator('#moods').evaluate(e=>parseFloat(e.style.getPropertyValue('--rail-x')));
- if(end>=start-100)throw Error('Horizontal story does not move');
+ if(await page.locator('#moods,.mood-journey').count())throw Error('Removed mood scene remains on homepage');
  await page.locator('#photo-motion').uncheck();await page.waitForTimeout(150);
  if(await page.locator('.recipe-journey-pin').evaluate(e=>getComputedStyle(e).position)!=='static')throw Error('Disabled story remains pinned');
  if(await page.locator('.recipe-story-steps li').count()!==3)throw Error('Static steps missing');
@@ -23,7 +21,7 @@ const {chromium}=require('playwright');
  for(const [width,height] of [[360,640],[390,844],[768,1024],[1440,1000]]){
   await page.setViewportSize({width,height});await page.waitForTimeout(80);
   if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth))throw Error('Overflow '+width);
-  for(const id of ['recipes','negroni-story','moods','knowledge','zero','home-tools']){
+  for(const id of ['recipes','negroni-story','knowledge','zero','home-tools']){
    const box=await page.locator('#'+id).boundingBox();if(Math.abs(box.width-width)>1)throw Error('Section not full width '+id);
   }
  }
