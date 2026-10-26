@@ -22,7 +22,7 @@ def update_image(match):
  return tag
 for page in ROOT.glob('*.html'):
  html=page.read_text();html=re.sub(r'<img\b[^>]*>',update_image,html)
- html=re.sub(r'style.css\?v=\d+','style.css?v=12',html);html=re.sub(r'site-media.js\?v=\d+','site-media.js?v=2',html);html=re.sub(r'platform.js\?v=\d+','platform.js?v=8',html)
+ html=re.sub(r'style.css\?v=\d+','style.css?v=12',html);html=re.sub(r'site-media.js\?v=\d+','site-media.js?v=2',html);html=re.sub(r'platform.js\?v=\d+','platform.js?v=9',html)
  page.write_text(html)
 for page in ROOT.glob('*.css'):
  css=page.read_text()

@@ -29,9 +29,10 @@ SPECS={
 'zero':('berry-lemonade',None,'Малиновый лимонад с мятой и льдом'),
 'finale':('footer',None,'Коктейль Pendennis Club с бутылками ингредиентов'),
 'footer':('cranberry-alt',None,'Крупный план коктейля со льдом и цитрусовым гарниром'),
+'blue-lagoon':('blue-lagoon',None,'Голубой коктейль в бокале харрикейн с апельсином и вишней на тёплой барной стойке'),
 }
 output=ROOT/'assets/photos';output.mkdir(parents=True,exist_ok=True)
-USER_EDITS={'opening':'user-layered'}
+USER_EDITS={'opening':'user-layered','blue-lagoon':'blue-lagoon'}
 RETOUCHES={'virgin-mojito':'virgin-mojito','berry-spritz':'berry-spritz'}
 def build(pair):
  key,(base,crop,alt)=pair
@@ -75,6 +76,6 @@ protected={key for key,row in rows.items() if row.get('changes','').startswith('
 items=[(key,value) for key,value in SPECS.items() if (not selected or key in selected) and key not in protected]
 with concurrent.futures.ThreadPoolExecutor(max_workers=2) as pool:
  for k,row in pool.map(build,items):rows[k]=row;print(k,row['variants'][-1]['width'],row['variants'][-1]['height'],flush=True)
-manifest={'version':2,'sourceProvider':'Wikimedia Commons и обработанные фотографии пользователя','photos':rows,'recipes':{id:id for id in ['negroni','margarita','cosmopolitan','mojito','cranberry','virgin-mojito','lemonade','berry-spritz']}}
+manifest={'version':2,'sourceProvider':'Wikimedia Commons и обработанные фотографии пользователя','photos':rows,'recipes':{id:id for id in ['negroni','margarita','cosmopolitan','mojito','cranberry','virgin-mojito','lemonade','berry-spritz','blue-lagoon']}}
 (ROOT/'content/photo-manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
 (ROOT/'site-media.js').write_text('// Local, inspected photographs. Attribution: photos.html\nwindow.DG_MEDIA='+json.dumps(manifest,ensure_ascii=False,separators=(',',':'))+';\n')

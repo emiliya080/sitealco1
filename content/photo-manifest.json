@@ -742,6 +742,45 @@
           "bytes": 1156924
         }
       ]
+    },
+    "blue-lagoon": {
+      "alt": "Голубой коктейль в бокале харрикейн с апельсином и вишней на тёплой барной стойке",
+      "sourceTitle": "Изображение пользователя — Голубая лагуна",
+      "source": null,
+      "original": "assets/photo-edits/blue-lagoon.png",
+      "originalWidth": 1536,
+      "originalHeight": 1024,
+      "nativeWidth": 1536,
+      "nativeHeight": 1024,
+      "author": "Изображение предоставлено пользователем; фотографическая версия подготовлена ImageGen",
+      "license": "Предоставлено пользователем для оформления сайта",
+      "licenseUrl": null,
+      "changes": "По изображению пользователя подготовлена фотографическая веб-версия без людей и текста; веб-файлы не увеличены выше разрешения мастера.",
+      "crop": null,
+      "userProvided": true,
+      "backgroundRetouched": true,
+      "editedMaster": "assets/photo-edits/blue-lagoon.png",
+      "peopleFree": true,
+      "variants": [
+        {
+          "src": "assets/photos/blue-lagoon-studio-small.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 99078
+        },
+        {
+          "src": "assets/photos/blue-lagoon-studio-medium.webp",
+          "width": 1536,
+          "height": 1024,
+          "bytes": 218390
+        },
+        {
+          "src": "assets/photos/blue-lagoon-studio-large.webp",
+          "width": 1536,
+          "height": 1024,
+          "bytes": 241432
+        }
+      ]
     }
   },
   "recipes": {
@@ -752,6 +791,7 @@
     "cranberry": "cranberry",
     "virgin-mojito": "virgin-mojito",
     "lemonade": "lemonade",
-    "berry-spritz": "berry-spritz"
+    "berry-spritz": "berry-spritz",
+    "blue-lagoon": "blue-lagoon"
   }
 }
