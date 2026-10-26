@@ -42,56 +42,56 @@
       ]
     },
     "character": {
-      "alt": "Пять коктейльных бокалов на стойке — обработка фото пользователя",
-      "sourceTitle": "Фотография предоставлена пользователем: user-coupes",
-      "source": null,
-      "original": "assets/photo-edits/user-coupes.png",
-      "originalWidth": 1672,
-      "originalHeight": 941,
-      "nativeWidth": 1672,
-      "nativeHeight": 941,
-      "author": "Исходное фото предоставлено пользователем; автор не указан",
-      "license": "Предоставлено пользователем для оформления сайта",
-      "licenseUrl": null,
+      "alt": "Янтарный Негрони со льдом и цитрусовой цедрой на тёмной барной стойке",
+      "sourceTitle": "File:Negroni (cocktail).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Negroni_(cocktail).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Negroni_%28cocktail%29.jpg",
+      "originalWidth": 4032,
+      "originalHeight": 3024,
+      "nativeWidth": 4032,
+      "nativeHeight": 3024,
+      "author": "Sudhertzen",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "changes": "По фото пользователя: композиция адаптирована к широкому кадру, фон расширен генеративным редактором.",
       "crop": null,
-      "userProvided": true,
-      "backgroundRetouched": true,
-      "editedMaster": "assets/photo-edits/user-coupes.png",
+      "userProvided": false,
+      "backgroundRetouched": false,
+      "editedMaster": null,
       "peopleFree": true,
       "variants": [
         {
-          "src": "assets/photos/character-studio-small.webp",
+          "src": "assets/photos/character-cinema-small.webp",
           "width": 960,
-          "height": 540,
-          "bytes": 43430
+          "height": 720,
+          "bytes": 37208
         },
         {
-          "src": "assets/photos/character-studio-medium.webp",
-          "width": 1672,
-          "height": 941,
-          "bytes": 120340
+          "src": "assets/photos/character-cinema-medium.webp",
+          "width": 1920,
+          "height": 1440,
+          "bytes": 206348
         },
         {
-          "src": "assets/photos/character-studio-large.webp",
-          "width": 1672,
-          "height": 941,
-          "bytes": 139808
+          "src": "assets/photos/character-cinema-large.webp",
+          "width": 3840,
+          "height": 2880,
+          "bytes": 1641376
         }
       ]
     },
     "moment": {
-      "alt": "Красный коктейль в бокале купе рядом с бутылками ингредиентов",
-      "sourceTitle": "File:Hanky Panky Cocktail.jpg",
-      "source": "https://commons.wikimedia.org/wiki/File:Hanky_Panky_Cocktail.jpg",
-      "original": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Hanky_Panky_Cocktail.jpg",
-      "originalWidth": 3456,
-      "originalHeight": 5184,
-      "nativeWidth": 3456,
-      "nativeHeight": 5184,
-      "author": "Will Shenton",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "alt": "Коктейль Pendennis Club на ножке рядом с бутылками в тёплом барном свете",
+      "sourceTitle": "File:Pendennis Club cocktail.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Pendennis_Club_cocktail.jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Pendennis_Club_cocktail.jpg",
+      "originalWidth": 5472,
+      "originalHeight": 3648,
+      "nativeWidth": 5472,
+      "nativeHeight": 3648,
+      "author": "Adrian Scottow",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
       "changes": "WebP-конверсия и уменьшение без увеличения исходника; адаптивное кадрирование при показе.",
       "crop": null,
       "userProvided": false,
@@ -100,22 +100,22 @@
       "peopleFree": true,
       "variants": [
         {
-          "src": "assets/photos/moment-studio-small.webp",
-          "width": 640,
-          "height": 960,
-          "bytes": 47392
+          "src": "assets/photos/moment-cinema-small.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 31406
         },
         {
-          "src": "assets/photos/moment-studio-medium.webp",
-          "width": 1280,
-          "height": 1920,
-          "bytes": 174166
+          "src": "assets/photos/moment-cinema-medium.webp",
+          "width": 1920,
+          "height": 1280,
+          "bytes": 129418
         },
         {
-          "src": "assets/photos/moment-studio-large.webp",
-          "width": 2560,
-          "height": 3840,
-          "bytes": 802626
+          "src": "assets/photos/moment-cinema-large.webp",
+          "width": 3840,
+          "height": 2560,
+          "bytes": 775142
         }
       ]
     },

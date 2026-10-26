@@ -11,8 +11,8 @@ source=Path(sys.argv[1]) if len(sys.argv)>1 else Path('/tmp/candidates')
 # id: source basename, optional original-pixel crop, truthful subject description.
 SPECS={
 'opening':('user-layered',None,'Многослойный коктейль со льдом и апельсином — обработка фото пользователя'),
-'character':('user-coupes',None,'Пять коктейльных бокалов на стойке — обработка фото пользователя'),
-'moment':('hanky-panky',None,'Красный коктейль в бокале купе рядом с бутылками ингредиентов'),
+'character':('detail-negroni',None,'Янтарный Негрони со льдом и цитрусовой цедрой на тёмной барной стойке'),
+'moment':('footer',None,'Коктейль Pendennis Club на ножке рядом с бутылками в тёплом барном свете'),
 'negroni-detail':('hero-negroni',None,'Негрони в низком хрустальном бокале'),
 'negroni':('detail-negroni',None,'Негрони с апельсиновой цедрой'),
 'margarita':('margarita-studio',None,'Маргарита с солёным краем бокала'),
@@ -31,7 +31,7 @@ SPECS={
 'footer':('cranberry-alt',None,'Крупный план коктейля со льдом и цитрусовым гарниром'),
 }
 output=ROOT/'assets/photos';output.mkdir(parents=True,exist_ok=True)
-USER_EDITS={'opening':'user-layered','character':'user-coupes'}
+USER_EDITS={'opening':'user-layered'}
 RETOUCHES={'virgin-mojito':'virgin-mojito','berry-spritz':'berry-spritz'}
 def build(pair):
  key,(base,crop,alt)=pair
@@ -52,7 +52,8 @@ def build(pair):
  if crop:native=list(map(int,re.match(r'(\d+)x(\d+)',crop).groups()))
  variants=[]
  for name,maxsize,quality in [('small',960,84),('medium',1920,88),('large',3840,90)]:
-  dest=output/f'{key}-studio-{name}.webp'
+  edition='cinema' if key in ['character','moment'] else 'studio'
+  dest=output/f'{key}-{edition}-{name}.webp'
   cmd=['convert',str(original),'-auto-orient']
   if crop:cmd+=['-crop',crop,'+repage']
   cmd+=['-resize',str(maxsize)+'x'+str(maxsize)+'>','-strip','-quality',str(quality),str(dest)]

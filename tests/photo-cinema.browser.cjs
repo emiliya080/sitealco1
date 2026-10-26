@@ -12,6 +12,8 @@ const {chromium}=require('playwright');
  for(const [fraction,index] of [[0,0],[.5,1],[.99,2],[.1,0]]){
   await advance(fraction);
   if(await page.locator('.photo-slide.is-active').getAttribute('data-photo')!==String(index))throw Error('Wrong active frame');
+  await page.waitForFunction(()=>{const img=document.querySelector('.photo-slide.is-active img');return img.complete&&img.naturalWidth>0&&img.classList.contains('is-loaded')});
+  await page.screenshot({path:'/tmp/chapter-'+index+'.png'});
   const rect=await page.locator('.photo-sticky').boundingBox();
   if(rect.width!==1920||Math.abs(rect.height-1080)>1||Math.abs(rect.y)>1)throw Error('Not full viewport '+JSON.stringify(rect));
   if(await page.locator('.photo-slide:not(.is-active):not([inert])').count())throw Error('Hidden links focusable');
@@ -31,6 +33,11 @@ const {chromium}=require('playwright');
   const r=await page.locator('.photo-slide.is-active img').boundingBox();
   if(r.width<width||r.height<height)throw Error('Photo does not fill viewport');
  }
+ await page.route('**/*-large.webp',route=>route.abort());
+ await page.setViewportSize({width:1920,height:1080});await page.reload();await advance(.5);
+ await page.waitForFunction(()=>[...document.querySelectorAll('.photo-slide img')].every(i=>i.complete&&i.naturalWidth>0&&!i.currentSrc.endsWith('-large.webp')));
+ if(!await page.locator('.photo-load-error').evaluate(e=>e.hidden))throw Error('Stale load error after fallback');
+ await page.unroute('**/*-large.webp');
  await page.route('**/assets/photos/**',route=>route.abort());
  await page.reload();await page.locator('.photo-load-error:not([hidden])').waitFor();
  if(!await page.locator('.photo-load-error a').isVisible())throw Error('Missing image failure navigation');
