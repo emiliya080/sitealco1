@@ -14,7 +14,7 @@
    const {el,type}=scene,box=el.getBoundingClientRect();
    if(box.bottom < -80 || box.top > innerHeight+80)continue;
    const through=clamp((innerHeight-box.top)/(box.height+innerHeight));
-   const pin=el.querySelector('.recipe-journey-pin,.mood-pin');
+   const pin=el.querySelector('.recipe-journey-pin,.mood-pin,.knowledge-video-inner');
    const destination=pin&&wide.matches&&!still?clamp(-box.top/Math.max(1,box.height-pin.offsetHeight)):through;
    scene.position=still?destination:scene.position+(destination-scene.position)*(1-Math.exp(-dt/100));
    if(Math.abs(destination-scene.position)<.0003)scene.position=destination;else if(!still)pending=true;
@@ -29,8 +29,11 @@
    }else if(type==='rail'){
     const track=el.querySelector('.mood-track'),distance=Math.max(0,track.scrollWidth-el.querySelector('.mood-window').clientWidth);
     el.style.setProperty('--rail-x',still||!wide.matches?'0px':(-p*distance).toFixed(2)+'px');
-   }else if(type==='parallax')el.style.setProperty('--knowledge-y',still?'0px':((p-.5)*70).toFixed(2)+'px');
-   else if(type==='curtain'){
+   }else if(type==='knowledge-video'){
+    el.style.setProperty('--knowledge-progress',p.toFixed(4));
+    const video=el.querySelector('.knowledge-scroll-video');
+    if(video&&video.readyState>=1&&!still){const end=Math.max(0,video.duration-.04),time=p*end;if(Math.abs(video.currentTime-time)>.025)video.currentTime=time}
+   }else if(type==='curtain'){
     el.style.setProperty('--curtain',still?'0%':(Math.max(0,.5-p)*22).toFixed(3)+'%');
     el.style.setProperty('--zero-scale',still?'1':(1.08-p*.06).toFixed(4));
    }else if(type==='finale')el.style.setProperty('--finale-x',still?'0px':((1-p)*28).toFixed(2)+'px');
@@ -53,5 +56,6 @@
  }));
  document.querySelectorAll('#main img:not(.photo-scene-image)').forEach(img=>{const fail=()=>{img.classList.add('photo-failed');img.closest('a')?.classList.add('has-photo-error')};img.addEventListener('error',fail);if(img.complete&&!img.naturalWidth)fail()});
  document.querySelectorAll('.recipe-journey-video').forEach(video=>{const status=video.parentElement.querySelector('.recipe-video-status');video.addEventListener('error',()=>{video.parentElement.classList.add('has-video-error');status.hidden=false});video.addEventListener('loadedmetadata',()=>{status.hidden=true;schedule()});video.load()});
+ document.querySelectorAll('.knowledge-scroll-video').forEach(video=>{const section=video.closest('.knowledge-video-section'),status=section.querySelector('.knowledge-video-status');video.addEventListener('error',()=>{section.classList.add('has-video-error');status.hidden=false});video.addEventListener('loadedmetadata',()=>{section.classList.add('is-video-ready');status.hidden=true;schedule()});video.load()});
  mode();
 })();

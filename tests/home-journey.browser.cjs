@@ -6,10 +6,10 @@ const {chromium}=require('playwright');
  await page.goto(base+'/index.html');await page.evaluate(()=>document.fonts.ready);
  if(await page.locator('h1').count()!==1)throw Error('Expected one H1');
  if(await page.locator('#main svg,#main canvas,#main [src$=".png"]').count())throw Error('Illustrated objects on main');
- if(await page.locator('#main video:not(.ice-scroll-video):not(.recipe-journey-video)').count())throw Error('Unexpected video on main');
+ if(await page.locator('#main video:not(.knowledge-scroll-video):not(.recipe-journey-video)').count())throw Error('Unexpected video on main');
  if(await page.locator('.story-recipe-card:not([data-loop-clone])').count()!==6)throw Error('Recipe catalogue missing');
  if(await page.locator('[data-scroll-effect]').count()<6)throw Error('Missing diverse story scenes');
- async function advance(selector,fraction){await page.evaluate(({selector,fraction})=>{const s=document.querySelector(selector),pin=s.querySelector('.recipe-journey-pin,.mood-pin');scrollTo({top:scrollY+s.getBoundingClientRect().top+Math.max(0,s.offsetHeight-(pin?.offsetHeight||innerHeight))*fraction,behavior:'instant'})},{selector,fraction});await page.waitForTimeout(850)}
+ async function advance(selector,fraction){await page.evaluate(({selector,fraction})=>{const s=document.querySelector(selector),pin=s.querySelector('.recipe-journey-pin,.mood-pin,.knowledge-video-inner');scrollTo({top:scrollY+s.getBoundingClientRect().top+Math.max(0,s.offsetHeight-(pin?.offsetHeight||innerHeight))*fraction,behavior:'instant'})},{selector,fraction});await page.waitForTimeout(850)}
  const recipeVideo=page.locator('.recipe-journey-video');await recipeVideo.evaluate(v=>new Promise((ok,bad)=>{if(v.readyState>=1)return ok();v.addEventListener('loadedmetadata',ok,{once:true});v.addEventListener('error',bad,{once:true})}));
  const recipeTimes=[];for(const [fraction,step] of [[.05,'0'],[.5,'1'],[.9,'2'],[.1,'0']]){await advance('#negroni-story',fraction);if(await page.locator('[data-recipe-step].is-current').getAttribute('data-recipe-step')!==step)throw Error('Wrong recipe step');recipeTimes.push(await recipeVideo.evaluate(v=>v.currentTime))}
  if(!(recipeTimes[0]<recipeTimes[1]&&recipeTimes[1]<recipeTimes[2]&&recipeTimes[3]<recipeTimes[1]))throw Error('Recipe video does not follow steps '+recipeTimes);

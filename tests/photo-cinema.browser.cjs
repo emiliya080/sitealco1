@@ -7,7 +7,7 @@ const {chromium}=require('playwright');
  await page.goto(base+'/index.html');await page.evaluate(()=>document.fonts.ready);
  if(await page.locator('canvas').count())throw Error('Canvas remains');
  if(await page.locator('video').count()!==2)throw Error('Expected two scroll-controlled videos');
- if(!await page.locator('.ice-scroll-video source[src]').count())throw Error('Ice video source is missing');
+ if(!await page.locator('.knowledge-scroll-video source[src]').count())throw Error('Knowledge ice video source is missing');
  if(await page.locator('[src*="pour-"],[data-src*="pour-"]').count())throw Error('Uploaded video is referenced');
  if(!await page.locator('#main > section').first().evaluate(e=>e.classList.contains('photo-interlude')))throw Error('Cinema is not the first section');
  async function advance(fraction){await page.evaluate(fraction=>{const s=document.querySelector('.photo-interlude'),v=s.querySelector('.photo-sticky');scrollTo({top:scrollY+s.getBoundingClientRect().top+(s.offsetHeight-v.offsetHeight)*fraction,behavior:'instant'})},fraction);await page.waitForTimeout(900)}
