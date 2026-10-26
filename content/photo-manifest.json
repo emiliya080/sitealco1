@@ -6,116 +6,116 @@
       "alt": "Многослойный коктейль со льдом и апельсином — обработка фото пользователя",
       "sourceTitle": "Фотография предоставлена пользователем: user-layered",
       "source": null,
-      "original": "assets/photo-edits/user-layered.png",
-      "originalWidth": 1672,
-      "originalHeight": 941,
-      "nativeWidth": 1672,
-      "nativeHeight": 941,
-      "author": "Исходное фото предоставлено пользователем; автор не указан",
+      "original": "assets/photos/opening-studio-large.webp",
+      "originalWidth": 1821,
+      "originalHeight": 864,
+      "nativeWidth": 1821,
+      "nativeHeight": 864,
+      "author": "Фотография предоставлена пользователем; автор не указан",
       "license": "Предоставлено пользователем для оформления сайта",
       "licenseUrl": null,
-      "changes": "По фото пользователя: удалены человек, перчатка и щипцы; фон и кадрирование адаптированы генеративным редактором.",
+      "changes": "Файл заменён пользователем через GitHub; на сайте используется без увеличения разрешения.",
       "crop": null,
       "userProvided": true,
-      "backgroundRetouched": true,
-      "editedMaster": "assets/photo-edits/user-layered.png",
+      "backgroundRetouched": false,
+      "editedMaster": null,
       "peopleFree": true,
       "variants": [
         {
           "src": "assets/photos/opening-studio-small.webp",
-          "width": 960,
-          "height": 540,
-          "bytes": 64704
+          "width": 1821,
+          "height": 864,
+          "bytes": 1161036
         },
         {
           "src": "assets/photos/opening-studio-medium.webp",
-          "width": 1672,
-          "height": 941,
-          "bytes": 173450
+          "width": 1821,
+          "height": 864,
+          "bytes": 1161036
         },
         {
           "src": "assets/photos/opening-studio-large.webp",
-          "width": 1672,
-          "height": 941,
-          "bytes": 195496
+          "width": 1821,
+          "height": 864,
+          "bytes": 1161036
         }
       ]
     },
     "character": {
       "alt": "Янтарный Негрони со льдом и цитрусовой цедрой на тёмной барной стойке",
       "sourceTitle": "File:Negroni (cocktail).jpg",
-      "source": "https://commons.wikimedia.org/wiki/File:Negroni_(cocktail).jpg",
-      "original": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Negroni_%28cocktail%29.jpg",
-      "originalWidth": 4032,
-      "originalHeight": 3024,
-      "nativeWidth": 4032,
-      "nativeHeight": 3024,
-      "author": "Sudhertzen",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "changes": "По фото пользователя: композиция адаптирована к широкому кадру, фон расширен генеративным редактором.",
+      "source": null,
+      "original": "assets/photos/character-cinema-large.webp",
+      "originalWidth": 1821,
+      "originalHeight": 864,
+      "nativeWidth": 1821,
+      "nativeHeight": 864,
+      "author": "Фотография предоставлена пользователем; автор не указан",
+      "license": "Предоставлено пользователем для оформления сайта",
+      "licenseUrl": null,
+      "changes": "Файл заменён пользователем через GitHub; на сайте используется без увеличения разрешения.",
       "crop": null,
-      "userProvided": false,
+      "userProvided": true,
       "backgroundRetouched": false,
       "editedMaster": null,
       "peopleFree": true,
       "variants": [
         {
           "src": "assets/photos/character-cinema-small.webp",
-          "width": 960,
-          "height": 720,
-          "bytes": 37208
+          "width": 1821,
+          "height": 864,
+          "bytes": 1194318
         },
         {
           "src": "assets/photos/character-cinema-medium.webp",
-          "width": 1920,
-          "height": 1440,
-          "bytes": 206348
+          "width": 1821,
+          "height": 864,
+          "bytes": 1194318
         },
         {
           "src": "assets/photos/character-cinema-large.webp",
-          "width": 3840,
-          "height": 2880,
-          "bytes": 1641376
+          "width": 1821,
+          "height": 864,
+          "bytes": 1194318
         }
       ]
     },
     "moment": {
       "alt": "Коктейль Pendennis Club на ножке рядом с бутылками в тёплом барном свете",
       "sourceTitle": "File:Pendennis Club cocktail.jpg",
-      "source": "https://commons.wikimedia.org/wiki/File:Pendennis_Club_cocktail.jpg",
-      "original": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Pendennis_Club_cocktail.jpg",
-      "originalWidth": 5472,
-      "originalHeight": 3648,
-      "nativeWidth": 5472,
-      "nativeHeight": 3648,
-      "author": "Adrian Scottow",
-      "license": "CC BY-SA 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-      "changes": "WebP-конверсия и уменьшение без увеличения исходника; адаптивное кадрирование при показе.",
+      "source": null,
+      "original": "assets/photos/moment-cinema-large.webp",
+      "originalWidth": 1821,
+      "originalHeight": 864,
+      "nativeWidth": 1821,
+      "nativeHeight": 864,
+      "author": "Фотография предоставлена пользователем; автор не указан",
+      "license": "Предоставлено пользователем для оформления сайта",
+      "licenseUrl": null,
+      "changes": "Файл заменён пользователем через GitHub; на сайте используется без увеличения разрешения.",
       "crop": null,
-      "userProvided": false,
+      "userProvided": true,
       "backgroundRetouched": false,
       "editedMaster": null,
       "peopleFree": true,
       "variants": [
         {
           "src": "assets/photos/moment-cinema-small.webp",
-          "width": 960,
-          "height": 640,
-          "bytes": 31406
+          "width": 1821,
+          "height": 864,
+          "bytes": 1272768
         },
         {
           "src": "assets/photos/moment-cinema-medium.webp",
-          "width": 1920,
-          "height": 1280,
-          "bytes": 129418
+          "width": 1821,
+          "height": 864,
+          "bytes": 1272768
         },
         {
           "src": "assets/photos/moment-cinema-large.webp",
-          "width": 3840,
-          "height": 2560,
-          "bytes": 775142
+          "width": 1821,
+          "height": 864,
+          "bytes": 1272768
         }
       ]
     },

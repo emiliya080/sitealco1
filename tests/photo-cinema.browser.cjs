@@ -6,7 +6,7 @@ const {chromium}=require('playwright');
  const errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto(base+'/index.html');await page.evaluate(()=>document.fonts.ready);
  if(await page.locator('canvas').count())throw Error('Canvas remains');
- if(await page.locator('video').count()!==1)throw Error('Expected one ice scroll video');
+ if(await page.locator('video').count()!==2)throw Error('Expected two scroll-controlled videos');
  if(!await page.locator('.ice-scroll-video source[src]').count())throw Error('Ice video source is missing');
  if(await page.locator('[src*="pour-"],[data-src*="pour-"]').count())throw Error('Uploaded video is referenced');
  if(!await page.locator('#main > section').first().evaluate(e=>e.classList.contains('photo-interlude')))throw Error('Cinema is not the first section');

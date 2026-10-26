@@ -9,7 +9,8 @@ class Photos(unittest.TestCase):
   for key,photo in manifest['photos'].items():
    with self.subTest(photo=key):
     if photo.get('userProvided'):
-     self.assertTrue(photo.get('backgroundRetouched'));self.assertTrue((ROOT/photo['editedMaster']).is_file())
+     if photo.get('backgroundRetouched'):self.assertTrue((ROOT/photo['editedMaster']).is_file())
+     else:self.assertTrue((ROOT/photo['original']).is_file())
     else:self.assertTrue(photo['source'].startswith('https://commons.wikimedia.org/wiki/File:'))
     self.assertTrue(photo.get('userProvided') or photo['license'].startswith('CC ') or photo['license']=='CC0')
     self.assertTrue(photo.get('peopleFree'))

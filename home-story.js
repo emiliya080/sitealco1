@@ -23,6 +23,8 @@
     el.style.setProperty('--detail-scale',still?'1':(1.02+p*.085).toFixed(4));
     el.style.setProperty('--detail-pan',still?'0px':(-p*24).toFixed(2)+'px');
     el.style.setProperty('--detail-progress',p.toFixed(4));
+    const video=el.querySelector('.recipe-journey-video');
+    if(video&&video.readyState>=1&&!still){const end=Math.max(0,video.duration-.04),time=p*end;if(Math.abs(video.currentTime-time)>.025)video.currentTime=time}
     el.querySelectorAll('[data-recipe-step]').forEach((step,i)=>{const current=i===Math.min(2,Math.floor(p*3));step.classList.toggle('is-current',current);if(current&&!still&&wide.matches)step.setAttribute('aria-current','step');else step.removeAttribute('aria-current')});
    }else if(type==='rail'){
     const track=el.querySelector('.mood-track'),distance=Math.max(0,track.scrollWidth-el.querySelector('.mood-window').clientWidth);
@@ -50,5 +52,6 @@
   scrollTo({top:top+fraction*(section.offsetHeight-section.querySelector('.mood-pin').offsetHeight),behavior:'instant'});
  }));
  document.querySelectorAll('#main img:not(.photo-scene-image)').forEach(img=>{const fail=()=>{img.classList.add('photo-failed');img.closest('a')?.classList.add('has-photo-error')};img.addEventListener('error',fail);if(img.complete&&!img.naturalWidth)fail()});
+ document.querySelectorAll('.recipe-journey-video').forEach(video=>{const status=video.parentElement.querySelector('.recipe-video-status');video.addEventListener('error',()=>{video.parentElement.classList.add('has-video-error');status.hidden=false});video.addEventListener('loadedmetadata',()=>{status.hidden=true;schedule()});video.load()});
  mode();
 })();

@@ -24,3 +24,7 @@
 .photo-slide:nth-child(3) .photo-scene-image{object-fit:cover;object-position:66% center}
 .photo-slide:nth-child(2) .photo-scene-shade,.photo-slide:nth-child(3) .photo-scene-shade{background:linear-gradient(90deg,#050807e8,#050807b8 35%,#05080730 68%,#0508070a),linear-gradient(0deg,#080a09d9,transparent 30%,transparent 80%,#080a0966)}
 @media(max-width:600px){.photo-slide:nth-child(2) .photo-scene-image{object-position:60% center}.photo-slide:nth-child(3) .photo-scene-image{object-position:63% center}.photo-slide:nth-child(2) .photo-scene-shade,.photo-slide:nth-child(3) .photo-scene-shade{background:linear-gradient(0deg,#050807ed,#050807b8 40%,#05080720 78%,#05080760)}}
+
+/* The recipe steps use a real user-supplied video controlled by the same scroll progress. */
+.recipe-journey-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;transform:scale(var(--detail-scale,1.02)) translateY(var(--detail-pan,0px));will-change:transform;background:#17120d url('assets/video/recipe-steps-poster.jpg') center/cover no-repeat}.recipe-video-status{position:absolute;z-index:2;left:8%;top:30px;padding:10px 13px;background:#0c0a08dc;color:#ddd;font-size:10px;letter-spacing:.4px}.recipe-journey-photo.has-video-error .recipe-journey-video{display:none}
+@media(prefers-reduced-motion:reduce){.recipe-journey-video{visibility:hidden;transform:none!important;will-change:auto}}

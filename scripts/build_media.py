@@ -67,8 +67,12 @@ def build(pair):
  return key,{'alt':alt,'sourceTitle':record['title'],'source':info['descriptionurl'],'original':info['url'].split('?')[0],'originalWidth':info['width'],'originalHeight':info['height'],'nativeWidth':native[0],'nativeHeight':native[1],'author':'Исходное фото предоставлено пользователем; автор не указан' if user else plain('Artist'),'license':license,'licenseUrl':None if user else plain('LicenseUrl') or 'https://creativecommons.org/publicdomain/zero/1.0/','changes':changes,'crop':crop,'userProvided':user,'backgroundRetouched':edited,'editedMaster':original.relative_to(ROOT).as_posix() if edited else None,'peopleFree':True,'variants':variants}
 selected=set(sys.argv[2:]);unknown=selected-set(SPECS)
 if unknown:raise SystemExit('Unknown photograph IDs: '+', '.join(sorted(unknown)))
-rows=json.loads((ROOT/'content/photo-manifest.json').read_text())['photos'] if selected else {}
-items=[(key,value) for key,value in SPECS.items() if not selected or key in selected]
+current=json.loads((ROOT/'content/photo-manifest.json').read_text())['photos']
+rows=current if selected else {key:row for key,row in current.items() if row.get('changes','').startswith('Файл заменён пользователем')}
+# Direct replacements uploaded by the owner are authoritative and must not be
+# overwritten by a later full rebuild from the older source-photo archive.
+protected={key for key,row in rows.items() if row.get('changes','').startswith('Файл заменён пользователем')}
+items=[(key,value) for key,value in SPECS.items() if (not selected or key in selected) and key not in protected]
 with concurrent.futures.ThreadPoolExecutor(max_workers=2) as pool:
  for k,row in pool.map(build,items):rows[k]=row;print(k,row['variants'][-1]['width'],row['variants'][-1]['height'],flush=True)
 manifest={'version':2,'sourceProvider':'Wikimedia Commons и обработанные фотографии пользователя','photos':rows,'recipes':{id:id for id in ['negroni','margarita','cosmopolitan','mojito','cranberry','virgin-mojito','lemonade','berry-spritz']}}
