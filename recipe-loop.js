@@ -14,6 +14,7 @@
  const before=originals.map(clone),after=originals.map(clone);
  before.reverse().forEach(card=>track.prepend(card));after.forEach(card=>track.append(card));
  const cards=[...track.children];
+ cards.forEach(card=>card.querySelectorAll('img').forEach(img=>{img.loading='eager'}));
  function measure(){
   const pitch=originals.length>1?originals[1].offsetLeft-originals[0].offsetLeft:originals[0].offsetWidth+24;
   cycle=pitch*originals.length;
@@ -26,9 +27,10 @@
   const center=viewport.clientWidth/2,reach=Math.max(1,viewport.clientWidth*.62);
   cards.forEach(card=>{
    const x=card.offsetLeft-offset+card.offsetWidth/2,d=(x-center)/reach,a=Math.min(1.15,Math.abs(d));
-   card.style.setProperty('--loop-y',(12+74*a*a).toFixed(2)+'px');
-   card.style.setProperty('--loop-r',(d*4.2).toFixed(2)+'deg');
-   card.style.setProperty('--loop-s',(.95+.05*Math.min(1,a)).toFixed(4));
+   card.style.setProperty('--loop-y',(10+82*a*a).toFixed(2)+'px');
+   card.style.setProperty('--loop-r',(d*3.6).toFixed(2)+'deg');
+   card.style.setProperty('--loop-s',(1.16-.38*Math.min(1,a)).toFixed(4));
+   card.style.setProperty('--loop-fade',(1-.25*Math.min(1,a)).toFixed(4));
   });
  }
  function stopped(){return reduce.matches||!motion?.checked}
