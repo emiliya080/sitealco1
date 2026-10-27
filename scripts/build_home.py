@@ -39,5 +39,5 @@ start=footer.find('<div><h3>Наше приложение</h3>');start=footer.fi
 footer=re.sub(r'<a class="footer-photo".*?</a>','',footer,count=1,flags=re.S)
 scripts='<script src="script.js?v=7"></script><script src="site-config.js"></script><script src="site-media.js?v=2"></script><script src="platform-core.js?v=1"></script><script src="platform.js?v=11"></script><script src="photo-home.js?v=8"></script><script src="recipe-loop.js?v=3"></script><script src="home-story.js?v=5"></script></body></html>'
 s=head+'<main id="main">'+opening+'<div class="chapter-spacer" aria-hidden="true"></div>'+spotlight+'<div class="chapter-spacer" aria-hidden="true"></div>'+catalog+'<div class="chapter-spacer" aria-hidden="true"></div>'+knowledge+tools+final+'</main>'+footer+scripts
-s=re.sub(r'<link rel="stylesheet" href="home-story.css\?v=\d+">','',s);s=re.sub(r'photo-home.css\?v=\d+','photo-home.css?v=7',s).replace('</head>','<link rel="stylesheet" href="home-story.css?v=14"></head>')
+s=re.sub(r'<link rel="stylesheet" href="home-story.css\?v=\d+">','',s);s=re.sub(r'photo-home.css\?v=\d+','photo-home.css?v=7',s).replace('</head>','<link rel="stylesheet" href="home-story.css?v=15"></head>')
 s=s.replace('↗','<span class="ui-arrow" aria-hidden="true"></span>');p.write_text(s)
