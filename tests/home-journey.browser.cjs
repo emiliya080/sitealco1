@@ -19,6 +19,7 @@ const {chromium}=require('playwright');
  if(await page.locator('#moods,.mood-journey').count())throw Error('Removed mood scene remains on homepage');
  if(await page.locator('#zero,.zero-section').count())throw Error('Removed alcohol-free scene remains on homepage');
  if(await page.locator('.journey-nav,.home-manifesto').count())throw Error('Removed homepage introduction remains');
+ const spacers=page.locator('.chapter-spacer');if(await spacers.count()!==2)throw Error('Expected two homepage transition spacers');for(const spacer of await spacers.all()){const box=await spacer.boundingBox();if(box.height<220||box.height>266)throw Error('Homepage transition spacer has the wrong desktop height')}
  await page.locator('#photo-motion').uncheck();await page.waitForTimeout(150);
  if(await page.locator('.recipe-journey-pin').evaluate(e=>getComputedStyle(e).position)!=='static')throw Error('Disabled story remains pinned');
  if(await page.locator('.recipe-story-steps li').count()!==3)throw Error('Static steps missing');

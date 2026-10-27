@@ -44,3 +44,4 @@
 .story-enhanced.recipe-loop-ready .story-recipe-card[data-reveal]{transform:translateY(var(--loop-y,10px)) rotate(var(--loop-r,0deg)) scale(var(--loop-s,1));opacity:var(--loop-fade,1)}
 .recipe-loop-ready .story-card-image img{transform:translateZ(0);backface-visibility:hidden;will-change:transform}.recipe-loop-ready .story-recipe-card:hover .story-card-image img{transform:translateZ(0) scale(1.045)}
 @media(min-width:701px) and (min-height:650px){.photo-home .photo-scene-content{transform:translateY(calc(var(--copy-shift,0px) - clamp(48px,7vh,72px)))}}
+.photo-home .photo-interlude,.photo-home .recipe-journey{border-bottom:0!important}.chapter-spacer{height:clamp(220px,14vw,265px);background:#11130f}.chapter-spacer+.recipe-journey,.chapter-spacer+.home-recipe-section{border-top:0}@media(max-width:700px){.chapter-spacer{height:140px}}
