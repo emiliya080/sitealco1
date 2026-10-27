@@ -6,7 +6,7 @@ ROOT=Path(__file__).resolve().parents[1]
 data=json.loads((ROOT/'content/platform-data.json').read_text())
 ing={i['id']:i for i in data['ingredients']};recipes={r['id']:r for r in data['recipes']}
 MEDIA=json.loads((ROOT/'content/photo-manifest.json').read_text())
-photos={id:MEDIA['recipes'][id] for id in ['negroni','margarita','cosmopolitan','mojito','blue-lagoon','bloody-mary']}
+photos={id:MEDIA['recipes'][id] for id in ['negroni','margarita','cosmopolitan','mojito','blue-lagoon','bloody-mary','sangria','aperol-spritz','sex-on-the-beach']}
 def image(id,cls='',sizes='100vw',eager=False):
  row=MEDIA['photos'][MEDIA['recipes'].get(id,id)];variants=row['variants'];src=variants[1]['src'];srcset=', '.join(f"{v['src']} {v['width']}w" for v in sorted({v['width']:v for v in variants}.values(),key=lambda v:v['width']))
  return f'<img class="{cls}" src="{src}" srcset="{srcset}" sizes="{sizes}" alt="{esc(row["alt"])}" loading="{"eager" if eager else "lazy"}" decoding="async" width="{variants[1]["width"]}" height="{variants[1]["height"]}">'
@@ -48,7 +48,7 @@ final='<section class="home-finale" data-scroll-effect="finale">'+image('finale'
 footer=old[old.index('<footer class="platform-footer">'):old.index('<script src="script.js')]
 start=footer.find('<div><h3>Наше приложение</h3>');start=footer.find('<div><h3>Ваши инструменты</h3>') if start<0 else start;footer=footer[:start]+'<div><h3>Ваши инструменты</h3><a href="favorites.html">Избранные рецепты</a><a href="compare.html">Сравнение коктейлей</a><a href="planner.html">План и список покупок</a><a href="builder.html?mode=bar">Домашний бар</a><a href="download.html">О мобильном приложении</a><a href="photos.html">Авторы фотографий и лицензии</a></div></div></footer>'
 footer=re.sub(r'<a class="footer-photo".*?</a>','',footer,count=1,flags=re.S)
-scripts='<script src="script.js?v=7"></script><script src="site-config.js"></script><script src="site-media.js?v=2"></script><script src="platform-core.js?v=1"></script><script src="platform.js?v=11"></script><script src="photo-home.js?v=8"></script><script src="recipe-loop.js?v=4"></script><script src="home-story.js?v=6"></script></body></html>'
+scripts='<script src="script.js?v=7"></script><script src="site-config.js"></script><script src="site-media.js?v=2"></script><script src="platform-core.js?v=1"></script><script src="platform.js?v=11"></script><script src="photo-home.js?v=9"></script><script src="recipe-loop.js?v=4"></script><script src="home-story.js?v=6"></script></body></html>'
 s=head+'<main id="main">'+opening+spotlight+catalog+knowledge+tools+final+'</main>'+footer+scripts
 s=re.sub(r'<link rel="stylesheet" href="home-story.css\?v=\d+">','',s);s=re.sub(r'photo-home.css\?v=\d+','photo-home.css?v=7',s).replace('</head>','<link rel="stylesheet" href="home-story.css?v=24"></head>')
 s=s.replace('↗','<span class="ui-arrow" aria-hidden="true"></span>');p.write_text(s)

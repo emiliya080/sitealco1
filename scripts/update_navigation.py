@@ -60,7 +60,7 @@ def create_page(name, title, eyebrow, intro, content):
     header = re.search(r'<header class="header wrap">.*?</header>(?:<div class="utility-nav wrap".*?</div>)?', index).group()
     footer = index[index.index('<footer class="platform-footer">'):]
     header = normalize_header(header, name)
-    head = f'<!doctype html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101110"><title>{title} — Drunken Guide</title><link rel="stylesheet" href="style.css?v=12"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"></head><body>'
+    head = f'<!doctype html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101110"><title>{title} — Drunken Guide</title><link rel="stylesheet" href="style.css?v=16"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"></head><body>'
     main = f'<main><section class="page-heading wrap"><p class="breadcrumbs"><a href="index.html">Главная</a> <span>/</span> {title}</p><p class="eyebrow">{eyebrow}</p><h1>{title}</h1><p class="page-intro">{intro}</p></section><section class="wrap page-section">{content}</section></main>'
     (ROOT / name).write_text(head + header + main + footer)
 
@@ -74,6 +74,6 @@ for path in ROOT.glob('*.html'):
     text = path.read_text()
     if pattern.search(text):
         text = normalize_header(text, path.name)
-        text = re.sub(r'style\.css\?v=\d+', 'style.css?v=15', text)
+        text = re.sub(r'style\.css\?v=\d+', 'style.css?v=16', text)
         text = re.sub(r'platform\.js\?v=\d+', 'platform.js?v=11', text)
         path.write_text(text)

@@ -82,3 +82,14 @@ img.page-photo{object-fit:contain}.drink-card-photo img.real-recipe-photo{object
 .platform-footer,.footer-photo{background:#000}.footer-photo img{object-fit:contain;object-position:82% center;background:#000}.footer-photo:after{background:linear-gradient(90deg,#000c,#0005 55%,transparent)}@media(max-width:600px){.footer-photo{height:350px}.footer-photo img{object-position:90% center}.footer-photo>span{max-width:260px}}
 .footer-photo img{object-fit:cover;object-position:center 55%}.footer-photo>span{max-width:600px}.footer-photo:after{background:linear-gradient(90deg,#000d,#0008 40%,#0002 80%)}@media(max-width:600px){.footer-photo img{object-position:center 50%}.footer-photo>span{max-width:250px}}
 .platform-footer{background:#07100e url('assets/photos/footer-shots-large.webp') center 58%/cover no-repeat}
+/* Softer hand-off into the photographic footer and a balanced shot-glass crop. */
+.platform-footer{border-top:0;background-position:center 62%}
+.platform-footer:after{content:'';position:absolute;z-index:0;left:0;right:0;top:-112px;height:114px;pointer-events:none;background:linear-gradient(180deg,transparent 0%,#07100e3d 38%,#07100ea8 78%,#07100e 100%)}
+@media(max-width:600px){.platform-footer{background-position:64% 62%}.platform-footer:after{top:-72px;height:74px}}
+
+/* Persistent motion control: visually a play/stop button, semantically the same checkbox. */
+.photo-home .header-motion{position:fixed;z-index:80;right:max(22px,calc((100vw - 1760px)/2));bottom:24px;height:46px;min-width:112px;padding:0 20px 0 17px;gap:10px;justify-content:center;border-color:#dfba7258;background:#10130fe8;color:#efe7d6;box-shadow:0 12px 38px #0009;backdrop-filter:blur(14px);transition:opacity .3s,transform .3s,border-color .25s,background .25s}
+.photo-home .header-motion:before{content:'■';font-size:9px;color:#dfba72}.photo-home .header-motion[data-state="play"]:before{content:'▶';font-size:11px}.photo-home .header-motion input{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}.photo-home .header-motion span{display:inline!important;font:600 10px/1 Manrope,Arial,sans-serif;letter-spacing:1.2px;text-transform:uppercase}.photo-home .header-motion:has(input:focus-visible){outline:2px solid #f0cc87;outline-offset:3px}.photo-home.motion-at-footer .header-motion{opacity:0;transform:translateY(18px);pointer-events:none}.photo-home .header-motion:has(input:disabled){opacity:.55;cursor:default}
+@media(max-width:600px){.photo-home .header-motion{right:14px;bottom:14px;width:auto;min-width:96px;height:42px;padding:0 15px}}
+/* The main navigation is optically centred on the homepage. */
+@media(min-width:701px){.photo-home>.header{width:auto;margin:0}.photo-home .header>nav{position:absolute;left:50%;transform:translateX(-50%);justify-content:center}}

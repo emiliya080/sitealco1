@@ -668,78 +668,78 @@
     "finale": {
       "alt": "Коктейль Pendennis Club с бутылками ингредиентов",
       "sourceTitle": "File:Pendennis Club cocktail.jpg",
-      "source": "https://commons.wikimedia.org/wiki/File:Pendennis_Club_cocktail.jpg",
-      "original": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Pendennis_Club_cocktail.jpg",
-      "originalWidth": 5472,
-      "originalHeight": 3648,
-      "nativeWidth": 5472,
-      "nativeHeight": 3648,
-      "author": "Adrian Scottow",
-      "license": "CC BY-SA 2.0",
+      "source": null,
+      "original": "assets/photos/finale-studio-large.webp",
+      "originalWidth": 2172,
+      "originalHeight": 724,
+      "nativeWidth": 2172,
+      "nativeHeight": 724,
+      "author": "Изображение предоставлено пользователем; автор не указан",
+      "license": "Предоставлено пользователем для оформления сайта",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
       "changes": "WebP-конверсия и уменьшение без увеличения исходника; адаптивное кадрирование при показе.",
       "crop": null,
-      "userProvided": false,
+      "userProvided": true,
       "backgroundRetouched": false,
       "editedMaster": null,
       "peopleFree": true,
       "variants": [
         {
           "src": "assets/photos/finale-studio-small.webp",
-          "width": 960,
-          "height": 640,
-          "bytes": 31406
+          "width": 2172,
+          "height": 724,
+          "bytes": 202750
         },
         {
           "src": "assets/photos/finale-studio-medium.webp",
-          "width": 1920,
-          "height": 1280,
-          "bytes": 129418
+          "width": 2172,
+          "height": 724,
+          "bytes": 202750
         },
         {
           "src": "assets/photos/finale-studio-large.webp",
-          "width": 3840,
-          "height": 2560,
-          "bytes": 775142
+          "width": 2172,
+          "height": 724,
+          "bytes": 202750
         }
       ]
     },
     "footer": {
       "alt": "Крупный план коктейля со льдом и цитрусовым гарниром",
       "sourceTitle": "File:Cocktail beverage juice (Unsplash).jpg",
-      "source": "https://commons.wikimedia.org/wiki/File:Cocktail_beverage_juice_(Unsplash).jpg",
-      "original": "https://upload.wikimedia.org/wikipedia/commons/8/86/Cocktail_beverage_juice_%28Unsplash%29.jpg",
-      "originalWidth": 5313,
-      "originalHeight": 3547,
-      "nativeWidth": 5313,
-      "nativeHeight": 3547,
-      "author": "Jez Timms jeztimms",
-      "license": "CC0",
+      "source": null,
+      "original": "assets/photos/footer-studio-large.webp",
+      "originalWidth": 2172,
+      "originalHeight": 724,
+      "nativeWidth": 2172,
+      "nativeHeight": 724,
+      "author": "Изображение предоставлено пользователем; автор не указан",
+      "license": "Предоставлено пользователем для оформления сайта",
       "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
       "changes": "WebP-конверсия и уменьшение без увеличения исходника; адаптивное кадрирование при показе.",
       "crop": null,
-      "userProvided": false,
+      "userProvided": true,
       "backgroundRetouched": false,
       "editedMaster": null,
       "peopleFree": true,
       "variants": [
         {
           "src": "assets/photos/footer-studio-small.webp",
-          "width": 960,
-          "height": 641,
-          "bytes": 58186
+          "width": 2172,
+          "height": 724,
+          "bytes": 114614
         },
         {
           "src": "assets/photos/footer-studio-medium.webp",
-          "width": 1920,
-          "height": 1282,
-          "bytes": 192760
+          "width": 2172,
+          "height": 724,
+          "bytes": 114614
         },
         {
           "src": "assets/photos/footer-studio-large.webp",
-          "width": 3840,
-          "height": 2564,
-          "bytes": 1156924
+          "width": 2172,
+          "height": 724,
+          "bytes": 114614
         }
       ]
     },
@@ -820,18 +820,138 @@
           "bytes": 237512
         }
       ]
+    },
+    "sangria": {
+      "alt": "Сангрия с красным вином, апельсином, яблоком и ягодами",
+      "sourceTitle": "Изображение предоставлено пользователем",
+      "source": null,
+      "original": "assets/photos/sangria-studio-large.webp",
+      "originalWidth": 1122,
+      "originalHeight": 1402,
+      "nativeWidth": 1122,
+      "nativeHeight": 1402,
+      "author": "Изображение предоставлено пользователем; автор не указан",
+      "license": "Предоставлено пользователем для оформления сайта",
+      "licenseUrl": null,
+      "changes": "Подготовлены адаптивные версии WebP без изменения композиции.",
+      "crop": null,
+      "userProvided": true,
+      "backgroundRetouched": false,
+      "editedMaster": null,
+      "peopleFree": true,
+      "variants": [
+        {
+          "src": "assets/photos/sangria-studio-small.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 87960
+        },
+        {
+          "src": "assets/photos/sangria-studio-medium.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 167080
+        },
+        {
+          "src": "assets/photos/sangria-studio-large.webp",
+          "width": 1122,
+          "height": 1402,
+          "bytes": 224940
+        }
+      ]
+    },
+    "aperol-spritz": {
+      "alt": "Апероль Шприц с апельсином и льдом на барной стойке",
+      "sourceTitle": "Изображение предоставлено пользователем",
+      "source": null,
+      "original": "assets/photos/aperol-spritz-studio-large.webp",
+      "originalWidth": 1122,
+      "originalHeight": 1402,
+      "nativeWidth": 1122,
+      "nativeHeight": 1402,
+      "author": "Изображение предоставлено пользователем; автор не указан",
+      "license": "Предоставлено пользователем для оформления сайта",
+      "licenseUrl": null,
+      "changes": "Подготовлены адаптивные версии WebP без изменения композиции.",
+      "crop": null,
+      "userProvided": true,
+      "backgroundRetouched": false,
+      "editedMaster": null,
+      "peopleFree": true,
+      "variants": [
+        {
+          "src": "assets/photos/aperol-spritz-studio-small.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 86630
+        },
+        {
+          "src": "assets/photos/aperol-spritz-studio-medium.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 165210
+        },
+        {
+          "src": "assets/photos/aperol-spritz-studio-large.webp",
+          "width": 1122,
+          "height": 1402,
+          "bytes": 225562
+        }
+      ]
+    },
+    "sex-on-the-beach": {
+      "alt": "Коктейль Секс на пляже с апельсином и вишней",
+      "sourceTitle": "Изображение предоставлено пользователем",
+      "source": null,
+      "original": "assets/photos/sex-on-the-beach-studio-large.webp",
+      "originalWidth": 1122,
+      "originalHeight": 1402,
+      "nativeWidth": 1122,
+      "nativeHeight": 1402,
+      "author": "Изображение предоставлено пользователем; автор не указан",
+      "license": "Предоставлено пользователем для оформления сайта",
+      "licenseUrl": null,
+      "changes": "Подготовлены адаптивные версии WebP без изменения композиции.",
+      "crop": null,
+      "userProvided": true,
+      "backgroundRetouched": false,
+      "editedMaster": null,
+      "peopleFree": true,
+      "variants": [
+        {
+          "src": "assets/photos/sex-on-the-beach-studio-small.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 92402
+        },
+        {
+          "src": "assets/photos/sex-on-the-beach-studio-medium.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 175312
+        },
+        {
+          "src": "assets/photos/sex-on-the-beach-studio-large.webp",
+          "width": 1122,
+          "height": 1402,
+          "bytes": 241014
+        }
+      ]
     }
   },
   "recipes": {
     "negroni": "negroni",
     "margarita": "margarita",
     "cosmopolitan": "cosmopolitan",
-    "mojito": "mojito",
+    "mojito": "virgin-mojito",
     "cranberry": "cranberry",
     "virgin-mojito": "virgin-mojito",
     "lemonade": "lemonade",
     "berry-spritz": "berry-spritz",
     "blue-lagoon": "blue-lagoon",
-    "bloody-mary": "bloody-mary"
+    "bloody-mary": "bloody-mary",
+    "sangria": "sangria",
+    "aperol-spritz": "aperol-spritz",
+    "sex-on-the-beach": "sex-on-the-beach"
   }
 }

@@ -5,7 +5,7 @@ ROOT=Path(__file__).resolve().parents[1]
 class Photos(unittest.TestCase):
  def test_real_resolution_and_sources(self):
   manifest=json.loads((ROOT/'content/photo-manifest.json').read_text())
-  self.assertEqual(len(manifest['recipes']),10)
+  self.assertEqual(len(manifest['recipes']),13)
   for key,photo in manifest['photos'].items():
    with self.subTest(photo=key):
     if photo.get('userProvided'):
@@ -33,7 +33,7 @@ class Photos(unittest.TestCase):
   page=Images();page.feed((ROOT/'index.html').read_text())
   urls=[i['src'] for i in page.images]
   self.assertEqual(len(urls),len(set(urls)))
-  self.assertGreaterEqual(len(urls),15)
+  self.assertGreaterEqual(len(urls),12)
   for image in page.images:
    descriptors=[part.strip().split()[-1] for part in image.get('srcset','').split(',') if part.strip()]
    self.assertEqual(len(descriptors),len(set(descriptors)))

@@ -29,7 +29,12 @@
  }
  function schedule(){if(!frame)frame=requestAnimationFrame(update)}
  function scroll(){if(still)return;const box=scene.getBoundingClientRect();target=clamp(-box.top/Math.max(1,scene.offsetHeight-scene.querySelector('.photo-sticky').offsetHeight));schedule()}
- function mode(){still=off||reduce.matches;body.classList.toggle('photo-still',still);control.checked=!still;control.disabled=reduce.matches;body.classList.add('photo-enhanced');if(still){target=position=[0,.5,1][Math.max(0,active)];schedule()}else scroll()}
+ function updateControl(){
+  const label=control.closest('.header-motion'),text=label&&label.querySelector('span');
+  if(text)text.textContent=still?'Пуск':'Стоп';
+  if(label){label.dataset.state=still?'play':'stop';label.title=still?'Включить анимацию':'Остановить анимацию'}
+ }
+ function mode(){still=off||reduce.matches;body.classList.toggle('photo-still',still);control.checked=!still;control.disabled=reduce.matches;body.classList.add('photo-enhanced');updateControl();if(still){target=position=[0,.5,1][Math.max(0,active)];schedule()}else scroll()}
  slides.forEach(slide=>{
   const img=slide.querySelector('img');
   // Local lower-resolution copies keep the scene usable if a large download fails.
@@ -48,5 +53,7 @@
  const observer='IntersectionObserver' in window?new IntersectionObserver(entries=>{for(const e of entries)if(e.isIntersecting){e.target.classList.add('is-visible');observer.unobserve(e.target)}},{threshold:.08}):null;
  document.querySelectorAll('.home-action-grid>a,.feature-card,.collection-card,.drink-card,.features>h2,.home-actions>h2,.about-teaser,[data-view="popular"]').forEach(el=>{el.classList.add('photo-reveal');if(observer)observer.observe(el);else el.classList.add('is-visible')});
  control.addEventListener('change',()=>{off=!control.checked;try{localStorage.setItem('dg-story-motion',off?'off':'on')}catch{}mode()});
- reduce.addEventListener('change',mode);window.addEventListener('scroll',scroll,{passive:true});window.addEventListener('resize',mode);window.addEventListener('pageshow',scroll);mode();
+ const footer=document.querySelector('.platform-footer');
+ function placeControl(){if(!footer)return;body.classList.toggle('motion-at-footer',footer.getBoundingClientRect().top<innerHeight-24)}
+ reduce.addEventListener('change',mode);window.addEventListener('scroll',()=>{scroll();placeControl()},{passive:true});window.addEventListener('resize',()=>{mode();placeControl()});window.addEventListener('pageshow',()=>{scroll();placeControl()});mode();placeControl();
 })();
