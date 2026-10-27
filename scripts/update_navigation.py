@@ -74,6 +74,6 @@ for path in ROOT.glob('*.html'):
     text = path.read_text()
     if pattern.search(text):
         text = normalize_header(text, path.name)
-        text = re.sub(r'style\.css\?v=\d+', 'style.css?v=14', text)
+        text = re.sub(r'style\.css\?v=\d+', 'style.css?v=15', text)
         text = re.sub(r'platform\.js\?v=\d+', 'platform.js?v=11', text)
         path.write_text(text)

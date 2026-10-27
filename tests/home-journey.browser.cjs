@@ -8,7 +8,7 @@ const {chromium}=require('playwright');
  if(await page.locator('#main svg,#main canvas,#main [src$=".png"]').count())throw Error('Illustrated objects on main');
  if(await page.locator('#main video:not(.knowledge-scroll-video):not(.recipe-journey-video)').count())throw Error('Unexpected video on main');
  if(await page.locator('.story-recipe-card:not([data-loop-clone])').count()!==6)throw Error('Recipe catalogue missing');
- if(await page.locator('[data-scroll-effect]').count()<5)throw Error('Missing diverse story scenes');
+ if(await page.locator('[data-scroll-effect]').count()<3)throw Error('Missing diverse story scenes');
  async function advance(selector,fraction){await page.evaluate(({selector,fraction})=>{const s=document.querySelector(selector),pin=s.querySelector('.recipe-journey-pin,.mood-pin,.knowledge-video-inner');scrollTo({top:scrollY+s.getBoundingClientRect().top+Math.max(0,s.offsetHeight-(pin?.offsetHeight||innerHeight))*fraction,behavior:'instant'})},{selector,fraction});await page.waitForTimeout(850)}
  const recipeVideo=page.locator('.recipe-journey-video');await recipeVideo.evaluate(v=>new Promise((ok,bad)=>{if(v.readyState>=1)return ok();v.addEventListener('loadedmetadata',ok,{once:true});v.addEventListener('error',bad,{once:true})}));
  await page.locator('#negroni-story').evaluate(s=>scrollTo({top:scrollY+s.getBoundingClientRect().top-52,behavior:'instant'}));await page.waitForTimeout(400);

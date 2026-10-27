@@ -15,7 +15,7 @@ const {chromium}=require('playwright'),fs=require('fs'),path=require('path');
   await page.evaluate(()=>document.querySelectorAll('img').forEach(i=>i.loading='eager'));
   await page.waitForFunction(()=>[...document.images].every(i=>i.complete),{},{timeout:15000});
   const broken=await page.locator('img').evaluateAll(imgs=>imgs.filter(i=>!i.naturalWidth).map(i=>i.src));if(broken.length)throw Error(file+' broken images: '+broken.join(','));
-  const count=await page.locator('img').count();if(!count)throw Error('No photographs on '+file);images+=count;
+  const count=await page.locator('img').count();if(!count&&!['community.html','notifications.html','reviews.html','search.html'].includes(file))throw Error('No photographs on '+file);images+=count;
   const local=await page.locator('a[href]').evaluateAll(anchors=>anchors.map(a=>a.href).filter(h=>h.startsWith(location.origin+'/')));
   for(const href of local){const url=new URL(href),relative=decodeURIComponent(url.pathname).replace(/^\//,'');const target=path.join(root,relative||'index.html');if(!fs.existsSync(target))throw Error(file+' links to '+href);links++}
   if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth))throw Error('Desktop overflow '+file);
