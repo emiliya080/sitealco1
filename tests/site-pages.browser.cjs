@@ -34,8 +34,8 @@ const {chromium}=require('playwright'),fs=require('fs'),path=require('path');
   await page.evaluate(p=>{const s=document.querySelector('.photo-interlude');scrollTo({top:scrollY+s.getBoundingClientRect().top+(s.offsetHeight-innerHeight)*p,behavior:'instant'})},fraction);
   await page.waitForTimeout(850);await page.screenshot({path:'/tmp/local-photo-'+name+'.png'});
  }
- await page.locator('#zero').scrollIntoViewIfNeeded();await page.waitForTimeout(350);await page.screenshot({path:'/tmp/local-photo-zero.png'});
+ await page.locator('#knowledge').scrollIntoViewIfNeeded();await page.waitForTimeout(350);await page.screenshot({path:'/tmp/local-photo-knowledge.png'});
  await page.locator('.platform-footer').scrollIntoViewIfNeeded();await page.waitForTimeout(350);await page.screenshot({path:'/tmp/local-photo-footer.png'});
- await page.setViewportSize({width:390,height:844});await page.locator('#zero').scrollIntoViewIfNeeded();await page.waitForTimeout(350);await page.screenshot({path:'/tmp/local-photo-zero-mobile.png'});
+ await page.setViewportSize({width:390,height:844});await page.locator('#knowledge').scrollIntoViewIfNeeded();await page.waitForTimeout(350);await page.screenshot({path:'/tmp/local-photo-knowledge-mobile.png'});
  await browser.close();console.log(`PASS: ${checked} pages, ${images} actual photos decoded, ${links} rendered local links, no external image requests, desktop/mobile geometry.`);
 })().catch(e=>{console.error(e);process.exit(1)});
