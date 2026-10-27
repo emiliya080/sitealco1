@@ -25,12 +25,17 @@ def tools(name):
     return '<div class="header-tools" aria-label="Личные разделы">' + ''.join(f'<a href="{href}" aria-label="{label}" data-label="{label}"{(" class=\"active\" aria-current=\"page\"" if name == href else "")}>{ICONS[href]}<span>{label}</span></a>' for href,label in labels) + '</div>'
 
 def normalize_header(text, name):
+    text = re.sub(r'<label class="header-motion".*?</label>', '', text, count=1)
     text = re.sub(r'<nav aria-label="Основная навигация">.*?</nav>', nav(name), text, count=1)
     if '<div class="header-tools"' in text:
         text = re.sub(r'<div class="header-tools".*?</div>', tools(name), text, count=1)
     else:
         text = re.sub(r'<a class="account-link.*?</a>', tools(name), text, count=1)
     text = re.sub(r'<div class="utility-nav wrap".*?</div>', '', text, count=1)
+    text = re.sub(r'<div class="wrap photo-preferences">.*?</div>', '', text, count=1)
+    if name == 'index.html':
+        control = '<label class="header-motion" title="Плавная анимация"><input id="photo-motion" type="checkbox" checked><span>Анимация</span></label>'
+        text = text.replace('</div><button class="menu"', '</div>' + control + '<button class="menu"', 1)
     return text
 
 def active_for(name):
@@ -69,6 +74,6 @@ for path in ROOT.glob('*.html'):
     text = path.read_text()
     if pattern.search(text):
         text = normalize_header(text, path.name)
-        text = re.sub(r'style\.css\?v=\d+', 'style.css?v=13', text)
+        text = re.sub(r'style\.css\?v=\d+', 'style.css?v=14', text)
         text = re.sub(r'platform\.js\?v=\d+', 'platform.js?v=11', text)
         path.write_text(text)
