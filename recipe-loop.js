@@ -41,7 +41,8 @@
   frame=0;const dt=Math.min(40,now-(last||now));last=now;
   if(visible&&!dragging&&!stopped()){
    offset+=(22/1000+velocity)*dt;
-   velocity*=Math.pow(.95,dt/1000);
+   // Ease a user's throw back to the calm default pace in a few seconds.
+   velocity*=Math.exp(-dt/850);
    if(Math.abs(velocity)<.002)velocity=0;
    normalize();paintCurve();
   }
