@@ -3,6 +3,10 @@
  'use strict';
  const body=document.body,control=document.querySelector('#photo-motion');
  if(!control)return;
+ const floatingControl=control.closest('.header-motion');
+ // The animated header is a fixed-position containing block, so keep this
+ // viewport control directly under body.
+ if(floatingControl)body.append(floatingControl);
  const reduce=matchMedia('(prefers-reduced-motion: reduce)'),hero=document.querySelector('.hero'),scene=document.querySelector('.photo-interlude');
  const slides=[...scene.querySelectorAll('.photo-slide')],chapters=[...scene.querySelectorAll('[data-chapter]')];
  let off=false,still=false,frame=0,target=0,position=0,last=0,active=-1;
@@ -53,7 +57,5 @@
  const observer='IntersectionObserver' in window?new IntersectionObserver(entries=>{for(const e of entries)if(e.isIntersecting){e.target.classList.add('is-visible');observer.unobserve(e.target)}},{threshold:.08}):null;
  document.querySelectorAll('.home-action-grid>a,.feature-card,.collection-card,.drink-card,.features>h2,.home-actions>h2,.about-teaser,[data-view="popular"]').forEach(el=>{el.classList.add('photo-reveal');if(observer)observer.observe(el);else el.classList.add('is-visible')});
  control.addEventListener('change',()=>{off=!control.checked;try{localStorage.setItem('dg-story-motion',off?'off':'on')}catch{}mode()});
- const footer=document.querySelector('.platform-footer');
- function placeControl(){if(!footer)return;body.classList.toggle('motion-at-footer',footer.getBoundingClientRect().top<innerHeight-24)}
- reduce.addEventListener('change',mode);window.addEventListener('scroll',()=>{scroll();placeControl()},{passive:true});window.addEventListener('resize',()=>{mode();placeControl()});window.addEventListener('pageshow',()=>{scroll();placeControl()});mode();placeControl();
+ reduce.addEventListener('change',mode);window.addEventListener('scroll',scroll,{passive:true});window.addEventListener('resize',mode);window.addEventListener('pageshow',scroll);mode();
 })();
