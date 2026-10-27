@@ -43,3 +43,4 @@
 @media(prefers-reduced-motion:reduce){.recipe-loop-ready .recipe-loop-window{height:auto;overflow-x:auto;scroll-snap-type:x mandatory}.recipe-loop-ready .home-recipe-grid{transform:none!important;padding:18px 5% 35px}.recipe-loop-ready .story-recipe-card{transform:none!important;scroll-snap-align:center}.recipe-loop-ready .recipe-loop-hint{margin:0 0 25px}}
 .story-enhanced.recipe-loop-ready .story-recipe-card[data-reveal]{transform:translateY(var(--loop-y,10px)) rotate(var(--loop-r,0deg)) scale(var(--loop-s,1));opacity:var(--loop-fade,1)}
 .recipe-loop-ready .story-card-image img{transform:translateZ(0);backface-visibility:hidden;will-change:transform}.recipe-loop-ready .story-recipe-card:hover .story-card-image img{transform:translateZ(0) scale(1.045)}
+@media(min-width:701px) and (min-height:650px){.photo-home .photo-scene-content{transform:translateY(calc(var(--copy-shift,0px) - clamp(48px,7vh,72px)))}}
