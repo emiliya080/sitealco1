@@ -25,8 +25,6 @@ for i,key in enumerate(['opening','character','moment']):
 opening=re.sub(r'<a class="photo-source".*?</a>','<a class="photo-source" href="photos.html">Авторы фотографий ↗</a>',opening)
 
 # Hero now carries the sole page H1; no fake phone UI on the homepage.
-nav='<nav class="journey-nav" aria-label="Разделы главной"><a href="#recipes">Рецепты</a><a href="#negroni-story">Приготовление</a><a href="#knowledge">Знания</a><a href="#home-tools">Мой бар</a></nav>'
-intro='''<section class="home-manifesto" data-scroll-effect="type"><div><p class="eyebrow">DRUNKEN GUIDE / ВАШ ЛИЧНЫЙ ГИД</p><h2>Вкус — в деталях.<br><em>Всё остальное здесь.</em></h2></div><div><p>Выбирайте рецепт, проверяйте пропорции и готовьте шаг за шагом. Сохраняйте удачные сочетания, сравнивайте вкусы и собирайте список покупок для своего вечера.</p><div class="manifesto-links"><a href="catalog.html">7 алкогольных рецептов ↗</a><a href="mocktails.html">3 рецепта без алкоголя ↗</a><a href="encyclopedia.html">11 разделов о напитках ↗</a></div></div></section>'''
 r=recipes['negroni']
 steps=[('Начните с основы','Наполните низкий бокал крупным льдом. Он охладит напиток и будет таять медленнее, чем мелкая ледяная крошка.'),('Три равные части','Добавьте 30 мл джина, 30 мл сладкого красного вермута и 30 мл Campari. Перемешивайте барной ложкой около 20 секунд.'),('Последний штрих','Выжмите масла апельсиновой цедры над бокалом и добавьте её в напиток. Полный рецепт можно сохранить в избранное или добавить в план вечеринки.')]
 recipe_video='<video class="recipe-journey-video" muted playsinline preload="auto" poster="assets/video/recipe-steps-poster.jpg" aria-label="Атмосферная подача коктейля с пламенем"><source src="assets/video/recipe-steps-scroll.mp4" type="video/mp4"></video>'
@@ -41,6 +39,6 @@ start=footer.find('<div><h3>Наше приложение</h3>');start=footer.fi
 if 'class="footer-photo"' not in footer:footer=footer.replace('<footer class="platform-footer">','<footer class="platform-footer"><a class="footer-photo" data-scroll-effect="footer" href="drinks.html" aria-label="Узнать больше о мире напитков">'+image('footer')+'<span>Вкус —<br>в деталях.<b>Откройте мир напитков ↗</b></span></a>')
 footer=re.sub(r'(<a class="footer-photo"[^>]*>).*?(<span>)',lambda match:match[1]+image('footer')+match[2],footer,flags=re.S)
 scripts='<script src="script.js?v=7"></script><script src="site-config.js"></script><script src="site-media.js?v=2"></script><script src="platform-core.js?v=1"></script><script src="platform.js?v=11"></script><script src="photo-home.js?v=8"></script><script src="recipe-loop.js?v=2"></script><script src="home-story.js?v=4"></script></body></html>'
-s=head+'<main id="main">'+opening+nav+intro+spotlight+catalog+knowledge+tools+final+'</main>'+footer+scripts
+s=head+'<main id="main">'+opening+spotlight+catalog+knowledge+tools+final+'</main>'+footer+scripts
 s=re.sub(r'<link rel="stylesheet" href="home-story.css\?v=\d+">','',s);s=re.sub(r'photo-home.css\?v=\d+','photo-home.css?v=7',s).replace('</head>','<link rel="stylesheet" href="home-story.css?v=11"></head>')
 s=s.replace('↗','<span class="ui-arrow" aria-hidden="true"></span>');p.write_text(s)

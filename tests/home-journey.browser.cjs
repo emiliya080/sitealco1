@@ -18,6 +18,7 @@ const {chromium}=require('playwright');
  if(!(recipeTimes[0]<recipeTimes[1]&&recipeTimes[1]<recipeTimes[2]&&recipeTimes[3]<recipeTimes[1]))throw Error('Recipe video does not follow steps '+recipeTimes);
  if(await page.locator('#moods,.mood-journey').count())throw Error('Removed mood scene remains on homepage');
  if(await page.locator('#zero,.zero-section').count())throw Error('Removed alcohol-free scene remains on homepage');
+ if(await page.locator('.journey-nav,.home-manifesto').count())throw Error('Removed homepage introduction remains');
  await page.locator('#photo-motion').uncheck();await page.waitForTimeout(150);
  if(await page.locator('.recipe-journey-pin').evaluate(e=>getComputedStyle(e).position)!=='static')throw Error('Disabled story remains pinned');
  if(await page.locator('.recipe-story-steps li').count()!==3)throw Error('Static steps missing');
