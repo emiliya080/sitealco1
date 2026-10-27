@@ -7,7 +7,8 @@
  if(originals.length<2)return;
  const reduce=matchMedia('(prefers-reduced-motion: reduce)');
  const motion=document.querySelector('#photo-motion');
- let cycle=0,offset=0,velocity=0,last=0,frame=0,visible=true,dragging=false,moved=false,startX=0,startOffset=0,lastX=0,lastMove=0;
+ const toggle=document.querySelector('.recipe-loop-toggle');
+ let cycle=0,offset=0,velocity=0,last=0,frame=0,visible=true,dragging=false,moved=false,userPaused=false,startX=0,startOffset=0,lastX=0,lastMove=0;
  function clone(card){
   const copy=card.cloneNode(true);copy.dataset.loopClone='true';copy.setAttribute('aria-hidden','true');copy.querySelectorAll('a,[tabindex]').forEach(el=>el.tabIndex=-1);copy.tabIndex=-1;return copy;
  }
@@ -29,15 +30,17 @@
    const x=card.offsetLeft-offset+card.offsetWidth/2,d=(x-center)/reach,a=Math.min(1.15,Math.abs(d));
    card.style.setProperty('--loop-y',(10+82*a*a).toFixed(2)+'px');
    card.style.setProperty('--loop-r',(d*3.6).toFixed(2)+'deg');
-   card.style.setProperty('--loop-s',(1.16-.38*Math.min(1,a)).toFixed(4));
-   card.style.setProperty('--loop-fade',(1-.25*Math.min(1,a)).toFixed(4));
+   card.style.setProperty('--loop-s',(1.13-.31*Math.min(1,a)).toFixed(4));
+   card.style.setProperty('--loop-fade',(1-.06*Math.min(1,a)).toFixed(4));
+   card.style.setProperty('--loop-dark',(.84*Math.pow(Math.min(1,a),1.45)).toFixed(4));
   });
  }
- function stopped(){return reduce.matches||!motion?.checked}
+ function stopped(){return userPaused||reduce.matches||!motion?.checked}
+ function syncToggle(){if(!toggle)return;const unavailable=reduce.matches||!motion?.checked;toggle.disabled=unavailable;toggle.setAttribute('aria-pressed',String(userPaused));toggle.querySelector('span').textContent=userPaused?'▶':'Ⅱ';toggle.querySelector('b').textContent=userPaused?'Продолжить':'Пауза'}
  function tick(now){
   frame=0;const dt=Math.min(40,now-(last||now));last=now;
   if(visible&&!dragging&&!stopped()){
-   offset+=(50/1000+velocity)*dt;
+   offset+=(22/1000+velocity)*dt;
    velocity*=Math.pow(.95,dt/1000);
    if(Math.abs(velocity)<.002)velocity=0;
    normalize();paintCurve();
@@ -50,9 +53,11 @@
  viewport.addEventListener('pointerdown',down);viewport.addEventListener('pointermove',move);viewport.addEventListener('pointerup',up);viewport.addEventListener('pointercancel',up);
  viewport.addEventListener('click',e=>{if(moved){e.preventDefault();e.stopPropagation();moved=false}},true);
  viewport.addEventListener('dragstart',e=>e.preventDefault());
+ toggle?.addEventListener('click',()=>{userPaused=!userPaused;velocity=0;syncToggle()});
  new ResizeObserver(measure).observe(viewport);
  if('IntersectionObserver' in window)new IntersectionObserver(entries=>{visible=entries[0].isIntersecting},{rootMargin:'150px'}).observe(viewport);
- reduce.addEventListener('change',measure);motion?.addEventListener('change',measure);
+ reduce.addEventListener('change',()=>{measure();syncToggle()});motion?.addEventListener('change',()=>{measure();syncToggle()});
  document.body.classList.add('recipe-loop-ready');measure();frame=requestAnimationFrame(tick);
+ syncToggle();
  window.addEventListener('pagehide',()=>cancelAnimationFrame(frame),{once:true});
 })();
