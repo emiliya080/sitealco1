@@ -14,7 +14,11 @@
    const {el,type}=scene,box=el.getBoundingClientRect();
    if(box.bottom < -80 || box.top > innerHeight+80)continue;
    const through=clamp((innerHeight-box.top)/(box.height+innerHeight));
+<<<<<<< HEAD
+   const pin=el.querySelector('.recipe-journey-pin,.mood-pin,.knowledge-video-inner,.home-bar-pin');
+=======
    const pin=el.querySelector('.recipe-journey-pin,.mood-pin,.knowledge-video-inner');
+>>>>>>> origin/main
    const destination=pin&&wide.matches&&!still?clamp(-box.top/Math.max(1,box.height-pin.offsetHeight)):through;
    scene.position=still?destination:scene.position+(destination-scene.position)*(1-Math.exp(-dt/100));
    if(Math.abs(destination-scene.position)<.0003)scene.position=destination;else if(!still)pending=true;
@@ -26,6 +30,17 @@
     const video=el.querySelector('.recipe-journey-video');
     if(video&&video.readyState>=1&&!still){const end=Math.max(0,video.duration-.04),time=p*end;if(Math.abs(video.currentTime-time)>.025)video.currentTime=time}
     el.querySelectorAll('[data-recipe-step]').forEach((step,i)=>{const current=i===Math.min(2,Math.floor(p*3));step.classList.toggle('is-current',current);if(current&&!still&&wide.matches)step.setAttribute('aria-current','step');else step.removeAttribute('aria-current')});
+<<<<<<< HEAD
+   }else if(type==='home-bar'){
+    const video=el.querySelector('.home-bar-video');
+    el.style.setProperty('--bar-progress',p.toFixed(4));
+    if(video&&video.readyState>=1&&Number.isFinite(video.duration)&&!still&&!video.seeking){
+     const time=p*Math.max(0,video.duration-.05);
+     if(Math.abs(video.currentTime-time)>.025)video.currentTime=time;
+    }
+    el.querySelectorAll('[data-bar-step]').forEach((item,i)=>item.classList.toggle('is-current',!still&&i===Math.min(4,Math.floor(p*5))));
+=======
+>>>>>>> origin/main
    }else if(type==='rail'){
     const track=el.querySelector('.mood-track'),distance=Math.max(0,track.scrollWidth-el.querySelector('.mood-window').clientWidth);
     el.style.setProperty('--rail-x',still||!wide.matches?'0px':(-p*distance).toFixed(2)+'px');
@@ -39,8 +54,13 @@
   if(pending&&!still)frame=requestAnimationFrame(update);else last=0;
  }
  function schedule(){if(!frame)frame=requestAnimationFrame(update)}
+<<<<<<< HEAD
+ function knowledgePlayback(restart=false){const video=document.querySelector('.knowledge-scroll-video');if(!video)return;if(still||!knowledgeVisible||document.hidden){video.pause();try{video.currentTime=0}catch{}return}if(restart)try{video.currentTime=0}catch{}video.play().catch(()=>{})}
+ function mode(){still=!control.checked||reduce.matches;body.classList.toggle('story-still',still);if(still)document.querySelectorAll('.knowledge-pending').forEach(card=>card.classList.remove('knowledge-pending'));knowledgePlayback(!still&&knowledgeVisible);schedule()}
+=======
  function knowledgePlayback(restart=false){const video=document.querySelector('.knowledge-scroll-video');if(!video)return;if(still||!knowledgeVisible){video.pause();try{video.currentTime=0}catch{}return}if(restart)try{video.currentTime=0}catch{}video.play().catch(()=>{})}
  function mode(){still=!control.checked||reduce.matches;body.classList.toggle('story-still',still);knowledgePlayback(!still&&knowledgeVisible);schedule()}
+>>>>>>> origin/main
  control.addEventListener('change',mode);reduce.addEventListener('change',mode);wide.addEventListener('change',mode);
  window.addEventListener('scroll',schedule,{passive:true});window.addEventListener('resize',mode);window.addEventListener('pageshow',schedule);
  document.querySelectorAll('.mood-card').forEach(card=>card.addEventListener('focus',()=>{
@@ -54,6 +74,31 @@
  document.querySelectorAll('#main img:not(.photo-scene-image)').forEach(img=>{const fail=()=>{img.classList.add('photo-failed');img.closest('a')?.classList.add('has-photo-error')};img.addEventListener('error',fail);if(img.complete&&!img.naturalWidth)fail()});
  document.querySelectorAll('.recipe-journey-video').forEach(video=>{const status=video.parentElement.querySelector('.recipe-video-status');video.addEventListener('error',()=>{video.parentElement.classList.add('has-video-error');status.hidden=false});video.addEventListener('loadedmetadata',()=>{status.hidden=true;schedule()});video.load()});
  document.querySelectorAll('.knowledge-scroll-video').forEach(video=>{const section=video.closest('.knowledge-video-section'),status=section.querySelector('.knowledge-video-status');video.addEventListener('error',()=>{section.classList.add('has-video-error');status.hidden=false});video.addEventListener('loadedmetadata',()=>{section.classList.add('is-video-ready');status.hidden=true;schedule()});video.load()});
+<<<<<<< HEAD
+ document.querySelectorAll('.home-bar-video').forEach(video=>{
+  const section=video.closest('.home-bar-story'),status=section.querySelector('.home-bar-video-status');
+  video.addEventListener('error',()=>{section.classList.add('has-video-error');status.hidden=false});
+  video.addEventListener('loadedmetadata',()=>{status.hidden=true;schedule()});
+  video.addEventListener('seeked',()=>{if(!still)schedule()});
+  section.querySelectorAll('[data-bar-step]').forEach((item,i)=>item.addEventListener('focus',()=>{
+   if(still||!wide.matches)return;
+   const top=scrollY+section.getBoundingClientRect().top;
+   scrollTo({top:top+(i+.5)/5*Math.max(0,section.offsetHeight-section.querySelector('.home-bar-pin').offsetHeight),behavior:'instant'});
+  }));
+ });
+ const knowledge=document.querySelector('.knowledge-video-media');
+ if(knowledge&&'IntersectionObserver' in window)new IntersectionObserver(([entry])=>{knowledgeVisible=entry.isIntersecting;knowledgePlayback()},{threshold:0.08}).observe(knowledge);
+ const knowledgeCards=[...document.querySelectorAll('.knowledge-grid>a')];
+ if('IntersectionObserver' in window){
+  const cardsObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(!entry.isIntersecting)return;entry.target.classList.remove('knowledge-pending');if(!still)entry.target.classList.add('knowledge-arrived');cardsObserver.unobserve(entry.target)})},{threshold:.08});
+  knowledgeCards.forEach(card=>{if(!reduce.matches&&control.checked)card.classList.add('knowledge-pending');cardsObserver.observe(card)});
+ }
+ document.addEventListener('visibilitychange',()=>knowledgePlayback());
+ window.addEventListener('pagehide',()=>document.querySelectorAll('video').forEach(video=>video.pause()));
+ window.addEventListener('pageshow',()=>knowledgePlayback());
+
+=======
  const knowledge=document.querySelector('.knowledge-video-section');if(knowledge&&'IntersectionObserver' in window)new IntersectionObserver(([entry])=>{knowledgeVisible=entry.isIntersecting&&entry.intersectionRatio>=.28;const cardsVisible=entry.isIntersecting&&entry.intersectionRatio>=.62;knowledge.classList.toggle('cards-visible',cardsVisible&&!still);knowledgePlayback(knowledgeVisible)},{threshold:[0,.28,.62]}).observe(knowledge);
+>>>>>>> origin/main
  mode();
 })();

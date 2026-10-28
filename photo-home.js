@@ -8,6 +8,10 @@
  // viewport control directly under body.
  if(floatingControl)body.append(floatingControl);
  const reduce=matchMedia('(prefers-reduced-motion: reduce)'),hero=document.querySelector('.hero'),scene=document.querySelector('.photo-interlude');
+<<<<<<< HEAD
+ if(!scene)return;
+=======
+>>>>>>> origin/main
  const slides=[...scene.querySelectorAll('.photo-slide')],chapters=[...scene.querySelectorAll('[data-chapter]')];
  let off=false,still=false,frame=0,target=0,position=0,last=0,active=-1;
  try{off=localStorage.getItem('dg-story-motion')==='off'}catch{}
@@ -35,10 +39,18 @@
  function scroll(){if(still)return;const box=scene.getBoundingClientRect();target=clamp(-box.top/Math.max(1,scene.offsetHeight-scene.querySelector('.photo-sticky').offsetHeight));schedule()}
  function updateControl(){
   const label=control.closest('.header-motion'),text=label&&label.querySelector('span');
+<<<<<<< HEAD
+  if(text)text.textContent=still?'Анимация выкл.':'Анимация вкл.';
+  control.setAttribute('aria-label',reduce.matches?'Анимация отключена в настройках устройства':'Анимация сайта');
+  if(label){label.dataset.state=still?'play':'stop';label.title=still?'Включить анимацию':'Остановить анимацию'}
+ }
+ function mode(){still=off||reduce.matches;body.classList.toggle('photo-still',still);control.checked=!still;control.disabled=reduce.matches;body.classList.add('photo-enhanced');updateControl();if(still){target=position=[0,.5,1][Math.max(0,active)];schedule()}else scroll();document.dispatchEvent(new Event('dg:motionchange'))}
+=======
   if(text)text.textContent=still?'Пуск':'Стоп';
   if(label){label.dataset.state=still?'play':'stop';label.title=still?'Включить анимацию':'Остановить анимацию'}
  }
  function mode(){still=off||reduce.matches;body.classList.toggle('photo-still',still);control.checked=!still;control.disabled=reduce.matches;body.classList.add('photo-enhanced');updateControl();if(still){target=position=[0,.5,1][Math.max(0,active)];schedule()}else scroll()}
+>>>>>>> origin/main
  slides.forEach(slide=>{
   const img=slide.querySelector('img');
   // Local lower-resolution copies keep the scene usable if a large download fails.
